@@ -2,6 +2,7 @@
   "name": "doctoralia-migration",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "dist/main.js",
   "scripts": {
     "start": "tsx src/main.ts",
@@ -19,8 +20,8 @@
   "packageManager": "pnpm@10.22.0",
   "dependencies": {
     "@faker-js/faker": "^10.1.0",
-    "@prisma/adapter-pg": "^7.0.1",
-    "@prisma/client": "^7.0.1",
+    "@prisma/adapter-pg": "^6.0.0",
+    "@prisma/client": "^6.0.0",
     "axios": "^1.13.2",
     "dotenv": "^17.2.3",
     "pg": "^8.16.3",
@@ -31,7 +32,7 @@
     "@types/cheerio": "^1.0.0",
     "@types/node": "^24.10.1",
     "@types/pg": "^8.15.6",
-    "prisma": "^7.0.1",
+    "prisma": "^6.0.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }

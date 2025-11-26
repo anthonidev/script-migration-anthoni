@@ -1,6 +1,5 @@
 import { PrismaClient, VisitModality, AppointmentStatus } from '@prisma/client';
-import { ScrapedDoctor } from '../scrapers/doctoralia.js';
-import { GeneratedPatient } from '../generators/patients.js';
+import { ScrapedDoctor, GeneratedPatient } from '../types/index.js';
 import { Env } from '../config/env.js';
 import { faker } from '@faker-js/faker';
 
@@ -22,7 +21,7 @@ export class DbService {
     async seedDatabase(doctors: ScrapedDoctor[], patients: GeneratedPatient[]) {
         console.log('🌱 Seeding database...');
 
-        // 1. Insert Doctors (with Treatments & Availability)
+        // 1. Insert Doctors
         const createdDoctors = [];
 
         for (const doc of doctors) {
@@ -76,7 +75,12 @@ export class DbService {
         console.log(`✅ Seeded ${createdPatients.length} patients.`);
 
         // 3. Generate Appointments
-        if (createdDoctors.length === 0 || createdPatients.length === 0) {
+        let allDoctors = createdDoctors;
+        if (allDoctors.length === 0) {
+            allDoctors = await this.prisma.doctor.findMany({ include: { treatments: true } });
+        }
+
+        if (allDoctors.length === 0 || createdPatients.length === 0) {
             console.warn('⚠️ Not enough data to generate appointments.');
             return;
         }
@@ -86,8 +90,9 @@ export class DbService {
         const targetAppointments = this.env.APPOINTMENTS_COUNT;
 
         while (appointmentCount < targetAppointments) {
-            const doctor = faker.helpers.arrayElement(createdDoctors);
+            const doctor = faker.helpers.arrayElement(allDoctors);
             const patient = faker.helpers.arrayElement(createdPatients);
+            if (doctor.treatments.length === 0) continue;
             const treatment = faker.helpers.arrayElement(doctor.treatments);
 
             if (!treatment) continue;

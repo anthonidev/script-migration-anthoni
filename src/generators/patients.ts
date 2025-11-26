@@ -1,12 +1,7 @@
 import { faker } from '@faker-js/faker';
 import { Env } from '../config/env.js';
 
-export interface GeneratedPatient {
-    fullName: string;
-    documentNumber: string;
-    phoneNumber: string;
-    email: string;
-}
+import { GeneratedPatient } from '../types/index.js';
 
 export class PatientGenerator {
     constructor(private env: Env) { }

@@ -1,37 +1,35 @@
 #!/bin/bash
 
-echo "🚀 Starting Doctoralia Migration Environment..."
-
-# 1. Start Docker
+# 1. Start Docker Containers
 echo "🐳 Starting Docker containers..."
 docker-compose up -d
 
-# Wait for Postgres (simple sleep loop as fallback)
-echo "⏳ Waiting for Database to be ready..."
-sleep 5
+# 2. Wait for Pipeline to Complete
+echo "⏳ Waiting for migration pipeline to complete..."
+echo "   (This may take a minute. You can check logs with 'docker-compose logs -f app')"
 
-# 2. Run Migrations
-echo "🔄 Running Prisma Migrations..."
-# Retry migration a few times in case DB is still starting
-pnpm prisma migrate dev --name init
-if [ $? -ne 0 ]; then
-    echo "⚠️ Migration failed, retrying in 5 seconds..."
-    sleep 5
-    pnpm prisma migrate dev --name init
-    if [ $? -ne 0 ]; then
-        echo "❌ Migration failed."
+# Loop to check for completion
+while true; do
+    if docker-compose logs app | grep -q "Process completed successfully"; then
+        echo "✅ Pipeline completed successfully!"
+        break
+    fi
+    if docker-compose logs app | grep -q "Pipeline failed"; then
+        echo "❌ Pipeline failed. Check logs:"
+        docker-compose logs app
         exit 1
     fi
+    sleep 2
+done
+
+# 3. Open Prisma Studio
+echo "📊 Opening Prisma Studio..."
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
+    start http://localhost:5555
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    open http://localhost:5555
+else
+    xdg-open http://localhost:5555
 fi
 
-# 3. Run Pipeline (Scrape + Seed)
-echo "▶️ Running Migration Pipeline..."
-pnpm start
-if [ $? -ne 0 ]; then
-    echo "❌ Pipeline failed."
-    exit 1
-fi
-
-# 4. Start Prisma Studio
-echo "📊 Starting Prisma Studio..."
-pnpm prisma studio
+echo "✨ Done! You can view the data in your browser."
