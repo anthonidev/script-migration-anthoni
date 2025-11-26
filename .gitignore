@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Data files (optional - remove if you want to commit scraped data)
+data/*.json
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Prisma
+.prisma/
+prisma/migrations/dev.db
+prisma/dev.db
+
+# Testing
+coverage/
+*.test.js
+*.spec.js
+
+# Docker
+.docker/
+*.pid
