@@ -1,0 +1,98 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum AppointmentStatus {
+  scheduled
+  completed
+  cancelled
+
+  @@map("appointment_status")
+}
+
+enum VisitModality {
+  in_person
+  online
+
+  @@map("visit_modality")
+}
+
+model Doctor {
+  id               BigInt               @id @default(autoincrement())
+  fullName         String               @map("full_name")
+  specialty        String
+  city             String
+  address          String?
+  phoneCountryCode String?              @map("phone_country_code") @db.VarChar(8)
+  phoneNumber      String?              @map("phone_number") @db.VarChar(32)
+  rating           Decimal?             @db.Decimal(2, 1)
+  reviewCount      Int?                 @map("review_count")
+  sourceProfileUrl String               @map("source_profile_url")
+  treatments       Treatment[]
+  availability     DoctorAvailability[]
+  appointments     Appointment[]
+
+  @@map("doctors")
+}
+
+model Treatment {
+  id              BigInt        @id @default(autoincrement())
+  doctorId        BigInt        @map("doctor_id")
+  name            String
+  price           Decimal?      @db.Decimal(10, 2)
+  currency        String?       @db.Char(3)
+  durationMinutes Int?          @map("duration_minutes") @db.SmallInt
+  doctor          Doctor        @relation(fields: [doctorId], references: [id])
+  appointments    Appointment[]
+
+  @@unique([doctorId, name], map: "ux_treatments_doctor_name")
+  @@map("treatments")
+}
+
+model DoctorAvailability {
+  id       BigInt        @id @default(autoincrement())
+  doctorId BigInt        @map("doctor_id")
+  startAt  DateTime      @map("start_at") @db.Timestamptz
+  endAt    DateTime      @map("end_at") @db.Timestamptz
+  modality VisitModality
+  doctor   Doctor        @relation(fields: [doctorId], references: [id])
+
+  @@index([doctorId])
+  @@index([startAt])
+  @@map("doctor_availability")
+}
+
+model Patient {
+  id             BigInt        @id @default(autoincrement())
+  fullName       String        @map("full_name")
+  documentNumber String?       @map("document_number") @db.VarChar(32)
+  phoneNumber    String?       @map("phone_number") @db.VarChar(32)
+  email          String?
+  appointments   Appointment[]
+
+  @@map("patients")
+}
+
+model Appointment {
+  id          BigInt            @id @default(autoincrement())
+  doctorId    BigInt            @map("doctor_id")
+  patientId   BigInt            @map("patient_id")
+  treatmentId BigInt            @map("treatment_id")
+  startAt     DateTime          @map("start_at") @db.Timestamptz
+  endAt       DateTime          @map("end_at") @db.Timestamptz
+  status      AppointmentStatus @default(scheduled)
+  doctor      Doctor            @relation(fields: [doctorId], references: [id])
+  patient     Patient           @relation(fields: [patientId], references: [id])
+  treatment   Treatment         @relation(fields: [treatmentId], references: [id])
+
+  @@index([doctorId])
+  @@index([patientId])
+  @@index([treatmentId])
+  @@index([startAt])
+  @@map("appointments")
+}
