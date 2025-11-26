@@ -8,7 +8,7 @@ import { logger } from './logger.js';
  * Espera un tiempo determinado
  */
 export async function delay(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 /**
@@ -26,24 +26,16 @@ export interface RetryOptions {
   maxRetries?: number;
   delayMs?: number;
   backoff?: boolean;
-  onRetry?: (attempt: number, error: any) => void;
+  onRetry?: (attempt: number, error: unknown) => void;
 }
 
 /**
  * Reintentar una función asíncrona con backoff exponencial
  */
-export async function retry<T>(
-  fn: () => Promise<T>,
-  options: RetryOptions = {}
-): Promise<T> {
-  const {
-    maxRetries = 3,
-    delayMs = 1000,
-    backoff = true,
-    onRetry,
-  } = options;
+export async function retry<T>(fn: () => Promise<T>, options: RetryOptions = {}): Promise<T> {
+  const { maxRetries = 3, delayMs = 1000, backoff = true, onRetry } = options;
 
-  let lastError: any;
+  let lastError: unknown;
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
@@ -57,10 +49,9 @@ export async function retry<T>(
 
       const waitTime = backoff ? delayMs * Math.pow(2, attempt - 1) : delayMs;
 
-      logger.warn(
-        `Attempt ${attempt}/${maxRetries} failed. Retrying in ${waitTime}ms...`,
-        { error: error instanceof Error ? error.message : error }
-      );
+      logger.warn(`Attempt ${attempt}/${maxRetries} failed. Retrying in ${waitTime}ms...`, {
+        error: error instanceof Error ? error.message : error,
+      });
 
       if (onRetry) {
         onRetry(attempt, error);

@@ -1,8 +1,5 @@
 import { z } from 'zod';
 
-/**
- * Schema de validación para variables de entorno
- */
 const envSchema = z.object({
   // Database
   DATABASE_URL: z.string().url('DATABASE_URL must be a valid URL'),
@@ -25,9 +22,6 @@ const envSchema = z.object({
 
 export type Env = z.infer<typeof envSchema>;
 
-/**
- * Valida y retorna las variables de entorno
- */
 export function validateEnv(): Env {
   try {
     const env = envSchema.parse(process.env);
@@ -46,16 +40,10 @@ export function validateEnv(): Env {
   }
 }
 
-/**
- * Obtiene las ciudades configuradas como array
- */
 export function getCities(env: Env): string[] {
-  return env.SCRAPING_CITIES.split(',').map(city => city.trim());
+  return env.SCRAPING_CITIES.split(',').map((city) => city.trim());
 }
 
-/**
- * Obtiene las especialidades configuradas como array
- */
 export function getSpecialties(env: Env): string[] {
-  return env.SCRAPING_SPECIALTIES.split(',').map(specialty => specialty.trim());
+  return env.SCRAPING_SPECIALTIES.split(',').map((specialty) => specialty.trim());
 }

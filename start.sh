@@ -2,7 +2,7 @@
 
 # 1. Start Docker Containers
 echo "🐳 Starting Docker containers..."
-docker-compose up -d
+docker-compose up -d --build
 
 # 2. Wait for Pipeline to Complete
 echo "⏳ Waiting for migration pipeline to complete..."

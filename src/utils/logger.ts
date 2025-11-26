@@ -2,7 +2,7 @@ export enum LogLevel {
   DEBUG = 0,
   INFO = 1,
   WARN = 2,
-  ERROR = 3
+  ERROR = 3,
 }
 
 export class Logger {
@@ -14,10 +14,14 @@ export class Logger {
 
   private parseLevel(level: string): LogLevel {
     switch (level.toLowerCase()) {
-      case 'debug': return LogLevel.DEBUG;
-      case 'warn': return LogLevel.WARN;
-      case 'error': return LogLevel.ERROR;
-      default: return LogLevel.INFO;
+      case 'debug':
+        return LogLevel.DEBUG;
+      case 'warn':
+        return LogLevel.WARN;
+      case 'error':
+        return LogLevel.ERROR;
+      default:
+        return LogLevel.INFO;
     }
   }
 
@@ -26,25 +30,25 @@ export class Logger {
     return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
   }
 
-  debug(message: string, ...args: any[]) {
+  debug(message: string, ...args: unknown[]) {
     if (this.level <= LogLevel.DEBUG) {
       console.debug(this.formatMessage('DEBUG', message), ...args);
     }
   }
 
-  info(message: string, ...args: any[]) {
+  info(message: string, ...args: unknown[]) {
     if (this.level <= LogLevel.INFO) {
       console.log(this.formatMessage('INFO', message), ...args);
     }
   }
 
-  warn(message: string, ...args: any[]) {
+  warn(message: string, ...args: unknown[]) {
     if (this.level <= LogLevel.WARN) {
       console.warn(this.formatMessage('WARN', message), ...args);
     }
   }
 
-  error(message: string, ...args: any[]) {
+  error(message: string, ...args: unknown[]) {
     if (this.level <= LogLevel.ERROR) {
       console.error(this.formatMessage('ERROR', message), ...args);
     }

@@ -36,7 +36,6 @@ async function main() {
     await db.connect();
     await db.seedDatabase(doctors, patients);
     logger.info('✅ Database seeded successfully.');
-
   } catch (error) {
     logger.error('❌ Pipeline failed:', error);
     process.exit(1);
