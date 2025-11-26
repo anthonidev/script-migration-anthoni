@@ -3,14 +3,16 @@ import { validateEnv } from './config/env.js';
 import { DoctoraliaScraper } from './scrapers/doctoralia.js';
 import { PatientGenerator } from './generators/patients.js';
 import { DbService } from './services/db.js';
+import { Logger } from './utils/logger.js';
 
 dotenv.config();
 
 async function main() {
-  console.log('🚀 Doctoralia Migration Pipeline');
-  console.log('================================\n');
-
   const env = validateEnv();
+  const logger = new Logger(env.LOG_LEVEL);
+
+  logger.info('🚀 Doctoralia Migration Pipeline');
+  logger.info('================================');
 
   // Services
   const scraper = new DoctoraliaScraper(env);
@@ -19,24 +21,24 @@ async function main() {
 
   try {
     // 1. Scrape Data
-    console.log('🕷️ Starting Scraper...');
+    logger.info('🕷️ Starting Scraper...');
     const doctors = await scraper.scrape();
     await scraper.close();
-    console.log(`✅ Scraped ${doctors.length} doctors.\n`);
+    logger.info(`✅ Scraped ${doctors.length} doctors.`);
 
     // 2. Generate Data
-    console.log('🎲 Starting Data Generator...');
+    logger.info('🎲 Starting Data Generator...');
     const patients = generator.generate();
-    console.log(`✅ Generated ${patients.length} patients.\n`);
+    logger.info(`✅ Generated ${patients.length} patients.`);
 
     // 3. Seed Database
-    console.log('💾 Starting Database Seeder...');
+    logger.info('💾 Starting Database Seeder...');
     await db.connect();
     await db.seedDatabase(doctors, patients);
-    console.log('✅ Database seeded successfully.\n');
+    logger.info('✅ Database seeded successfully.');
 
   } catch (error) {
-    console.error('❌ Pipeline failed:', error);
+    logger.error('❌ Pipeline failed:', error);
     process.exit(1);
   } finally {
     await db.disconnect();

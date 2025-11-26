@@ -22,17 +22,16 @@ Ejecuta el siguiente comando en la raíz del proyecto:
 **¿Qué hace este script?**
 
 1. Levanta los contenedores de Docker (Base de datos, Aplicación, Prisma Studio).
-2. Monitorea los logs hasta que el proceso de scraping y llenado de datos termina.
-3. Abre **Prisma Studio** en tu navegador predeterminado.
+2. Abre **Prisma Studio** en tu navegador predeterminado.
 
 ### Opción 2: Docker Compose Manual
 
 Si prefieres ejecutar los comandos de Docker directamente:
 
-1. Levanta los servicios:
+1. Levanta los servicios (y construye las imágenes si es necesario):
 
    ```bash
-   docker-compose up -d
+   docker-compose up -d --build
    ```
 
 2. (Opcional) Ver el progreso en los logs:
