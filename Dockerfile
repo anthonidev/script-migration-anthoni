@@ -54,7 +54,12 @@ RUN apt-get update && apt-get install -y \
     libxtst6 \
     lsb-release \
     xdg-utils \
+    chromium \
     && rm -rf /var/lib/apt/lists/*
+
+# Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
 # Install pnpm
 RUN npm install -g pnpm
@@ -66,9 +71,6 @@ COPY package.json pnpm-lock.yaml ./
 
 # Install dependencies
 RUN pnpm install
-
-# Install Chrome for Puppeteer
-RUN pnpm exec puppeteer browsers install chrome
 
 # Copy source code
 COPY . .

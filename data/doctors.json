@@ -12,12 +12,17 @@
     "treatments": [
       {
         "name": "Consulta de Cardiólogo",
-        "price": 95,
+        "price": 82,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
-        "price": 82,
+        "price": 158,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Cardiólogo 3",
+        "price": 227,
         "currency": "PEN"
       }
     ],
@@ -52,12 +57,22 @@
     "treatments": [
       {
         "name": "Consulta de Cardiólogo",
-        "price": 238,
+        "price": 145,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
-        "price": 88,
+        "price": 247,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Cardiólogo 3",
+        "price": 125,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Cardiólogo 4",
+        "price": 71,
         "currency": "PEN"
       }
     ],
@@ -92,17 +107,12 @@
     "treatments": [
       {
         "name": "Consulta de Cardiólogo",
-        "price": 239,
+        "price": 140,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
-        "price": 153,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 3",
-        "price": 68,
+        "price": 51,
         "currency": "PEN"
       }
     ],
@@ -137,12 +147,22 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 131,
+        "price": 180,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 137,
+        "price": 66,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Dermatólogo 3",
+        "price": 81,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Dermatólogo 4",
+        "price": 67,
         "currency": "PEN"
       }
     ],
@@ -177,12 +197,17 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 154,
+        "price": 212,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 107,
+        "price": 97,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Dermatólogo 3",
+        "price": 106,
         "currency": "PEN"
       }
     ],
@@ -217,22 +242,17 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 195,
+        "price": 158,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 152,
+        "price": 134,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 3",
-        "price": 127,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 4",
-        "price": 247,
+        "price": 65,
         "currency": "PEN"
       }
     ],
@@ -267,62 +287,62 @@
     "treatments": [
       {
         "name": "Consulta de Pediatra",
-        "price": 182,
+        "price": 93,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 2",
-        "price": 66,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dr. Marco Antonio Callo Corazao",
-    "specialty": "Pediatra",
-    "city": "Lima",
-    "address": "Lima",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 653,
-    "sourceProfileUrl": "https://www.doctoralia.pe/marco-antonio-callo-corazao/pediatra/los-olivos#address-id=34454&is-online-only=false&filters%5Bspecializations%5D%5B%5D=56",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 140,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 101,
+        "price": 232,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 3",
-        "price": 215,
+        "price": 151,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 4",
-        "price": 54,
+        "price": 222,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T09:00:00.000Z",
+        "endAt": "2025-11-27T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T09:00:00.000Z",
+        "endAt": "2025-11-28T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T09:00:00.000Z",
+        "endAt": "2025-11-29T09:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dr. Marco Antonio Callo Corazao",
+    "specialty": "Pediatra",
+    "city": "Lima",
+    "address": "Lima",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 653,
+    "sourceProfileUrl": "https://www.doctoralia.pe/marco-antonio-callo-corazao/pediatra/los-olivos#address-id=34454&is-online-only=false&filters%5Bspecializations%5D%5B%5D=56",
+    "treatments": [
+      {
+        "name": "Consulta de Pediatra",
+        "price": 186,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Pediatra 2",
+        "price": 53,
         "currency": "PEN"
       }
     ],
@@ -357,17 +377,17 @@
     "treatments": [
       {
         "name": "Consulta de Pediatra",
-        "price": 201,
+        "price": 130,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 2",
-        "price": 58,
+        "price": 209,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 3",
-        "price": 154,
+        "price": 85,
         "currency": "PEN"
       }
     ],
@@ -402,52 +422,57 @@
     "treatments": [
       {
         "name": "Consulta de Cardiólogo",
-        "price": 172,
+        "price": 138,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
+        "price": 199,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Cardiólogo 3",
+        "price": 195,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T09:00:00.000Z",
+        "endAt": "2025-11-27T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T09:00:00.000Z",
+        "endAt": "2025-11-28T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T09:00:00.000Z",
+        "endAt": "2025-11-29T09:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
+    "specialty": "Cardiólogo",
+    "city": "Bogotá",
+    "address": "Bogotá",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 422,
+    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#address-id=72116&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
+    "treatments": [
+      {
+        "name": "Consulta de Cardiólogo",
         "price": 179,
         "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
-    "specialty": "Cardiólogo",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 422,
-    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#address-id=72116&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
-    "treatments": [
-      {
-        "name": "Consulta de Cardiólogo",
-        "price": 187,
-        "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
-        "price": 156,
+        "price": 112,
         "currency": "PEN"
       }
     ],
@@ -482,22 +507,17 @@
     "treatments": [
       {
         "name": "Consulta de Cardiólogo",
-        "price": 122,
+        "price": 170,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
-        "price": 181,
+        "price": 249,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 3",
-        "price": 57,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 4",
-        "price": 88,
+        "price": 129,
         "currency": "PEN"
       }
     ],
@@ -532,22 +552,22 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 150,
+        "price": 145,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 207,
+        "price": 84,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 3",
-        "price": 129,
+        "price": 59,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 4",
-        "price": 205,
+        "price": 182,
         "currency": "PEN"
       }
     ],
@@ -582,17 +602,22 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 114,
+        "price": 110,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 86,
+        "price": 71,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 3",
-        "price": 191,
+        "price": 139,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Dermatólogo 4",
+        "price": 126,
         "currency": "PEN"
       }
     ],
@@ -627,22 +652,17 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 171,
+        "price": 144,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 141,
+        "price": 65,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 3",
-        "price": 143,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 4",
-        "price": 154,
+        "price": 54,
         "currency": "PEN"
       }
     ],
@@ -677,67 +697,62 @@
     "treatments": [
       {
         "name": "Consulta de Pediatra",
-        "price": 82,
+        "price": 122,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 2",
-        "price": 103,
+        "price": 66,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 3",
-        "price": 120,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Myriam Liliana Camargo Miranda",
-    "specialty": "Pediatra",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 483,
-    "sourceProfileUrl": "https://www.doctoralia.co/myriam-liliana-camargo-miranda/pediatra-terapeuta-complementario/bogota#address-id=54572&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 234,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 97,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 3",
-        "price": 247,
+        "price": 119,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 4",
-        "price": 87,
+        "price": 145,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T09:00:00.000Z",
+        "endAt": "2025-11-27T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T09:00:00.000Z",
+        "endAt": "2025-11-28T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T09:00:00.000Z",
+        "endAt": "2025-11-29T09:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dra. Myriam Liliana Camargo Miranda",
+    "specialty": "Pediatra",
+    "city": "Bogotá",
+    "address": "Bogotá",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 483,
+    "sourceProfileUrl": "https://www.doctoralia.co/myriam-liliana-camargo-miranda/pediatra-terapeuta-complementario/bogota#address-id=54572&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
+    "treatments": [
+      {
+        "name": "Consulta de Pediatra",
+        "price": 142,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Pediatra 2",
+        "price": 95,
         "currency": "PEN"
       }
     ],
@@ -772,12 +787,12 @@
     "treatments": [
       {
         "name": "Consulta de Pediatra",
-        "price": 200,
+        "price": 59,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 2",
-        "price": 162,
+        "price": 105,
         "currency": "PEN"
       }
     ],
@@ -812,22 +827,17 @@
     "treatments": [
       {
         "name": "Consulta de Cardiólogo",
-        "price": 193,
+        "price": 73,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
-        "price": 83,
+        "price": 158,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 3",
-        "price": 140,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 4",
-        "price": 236,
+        "price": 130,
         "currency": "PEN"
       }
     ],
@@ -862,22 +872,12 @@
     "treatments": [
       {
         "name": "Consulta de Cardiólogo",
-        "price": 51,
+        "price": 203,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
-        "price": 144,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 3",
-        "price": 168,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 4",
-        "price": 232,
+        "price": 89,
         "currency": "PEN"
       }
     ],
@@ -912,17 +912,17 @@
     "treatments": [
       {
         "name": "Consulta de Cardiólogo",
-        "price": 198,
+        "price": 109,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 2",
-        "price": 240,
+        "price": 180,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Cardiólogo 3",
-        "price": 70,
+        "price": 64,
         "currency": "PEN"
       }
     ],
@@ -957,22 +957,22 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 205,
+        "price": 236,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 141,
+        "price": 118,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 3",
-        "price": 133,
+        "price": 240,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 4",
-        "price": 228,
+        "price": 198,
         "currency": "PEN"
       }
     ],
@@ -1007,22 +1007,12 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 149,
+        "price": 53,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 56,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 106,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 4",
-        "price": 193,
+        "price": 173,
         "currency": "PEN"
       }
     ],
@@ -1057,17 +1047,17 @@
     "treatments": [
       {
         "name": "Consulta de Dermatólogo",
-        "price": 209,
+        "price": 228,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 2",
-        "price": 172,
+        "price": 234,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Dermatólogo 3",
-        "price": 242,
+        "price": 153,
         "currency": "PEN"
       }
     ],
@@ -1102,12 +1092,12 @@
     "treatments": [
       {
         "name": "Consulta de Pediatra",
-        "price": 182,
+        "price": 76,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 2",
-        "price": 50,
+        "price": 211,
         "currency": "PEN"
       }
     ],
@@ -1142,17 +1132,12 @@
     "treatments": [
       {
         "name": "Consulta de Pediatra",
-        "price": 186,
+        "price": 183,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 2",
-        "price": 78,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 3",
-        "price": 93,
+        "price": 176,
         "currency": "PEN"
       }
     ],
@@ -1187,17 +1172,12 @@
     "treatments": [
       {
         "name": "Consulta de Pediatra",
-        "price": 221,
+        "price": 224,
         "currency": "PEN"
       },
       {
         "name": "Tratamiento de Pediatra 2",
-        "price": 142,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 3",
-        "price": 214,
+        "price": 152,
         "currency": "PEN"
       }
     ],
