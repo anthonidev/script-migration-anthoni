@@ -6,6 +6,7 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "tsx src/main.ts",
+    "generate:data": "tsx src/scripts/generate-data.ts",
     "build": "tsc",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write \"src/**/*.{ts,json,md}\"",
@@ -26,6 +27,8 @@
     "@prisma/adapter-pg": "^6.0.0",
     "@prisma/client": "^6.0.0",
     "axios": "^1.13.2",
+    "chalk": "^5.6.2",
+    "cli-progress": "^3.12.0",
     "dotenv": "^17.2.3",
     "pg": "^8.16.3",
     "puppeteer": "^24.31.0",
@@ -33,6 +36,7 @@
   },
   "devDependencies": {
     "@types/cheerio": "^1.0.0",
+    "@types/cli-progress": "^3.11.6",
     "@types/node": "^24.10.1",
     "@types/pg": "^8.15.6",
     "@typescript-eslint/eslint-plugin": "^8.48.0",

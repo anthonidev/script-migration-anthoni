@@ -10,6 +10,7 @@ import { ScrapedDoctor, GeneratedPatient } from '../types/index.js';
 import { Env } from '../config/env.js';
 import { faker } from '@faker-js/faker';
 import { Logger } from '../utils/logger.js';
+import { ProgressUtils } from '../utils/progress.js';
 
 type DoctorWithTreatments = Doctor & { treatments: Treatment[] };
 
@@ -46,6 +47,9 @@ export class DbService {
     this.logger.info(`Processing ${doctors.length} doctors...`);
     const createdDoctors: DoctorWithTreatments[] = [];
 
+    const bar = ProgressUtils.createBar(ProgressUtils.getStandardFormat('Seeding Doctors'));
+    bar.start(doctors.length, 0);
+
     for (const doc of doctors) {
       // Avoid duplicates based on sourceProfileUrl
       const exists = await this.prisma.doctor.findFirst({
@@ -53,7 +57,7 @@ export class DbService {
       });
 
       if (exists) {
-        this.logger.debug(`Doctor already exists: ${doc.fullName}`);
+        bar.increment();
         continue;
       }
 
@@ -91,7 +95,9 @@ export class DbService {
       } catch (error) {
         this.logger.error(`Failed to create doctor ${doc.fullName}`, error);
       }
+      bar.increment();
     }
+    bar.stop();
     this.logger.info(`✅ Seeded ${createdDoctors.length} new doctors.`);
     return createdDoctors;
   }
@@ -99,6 +105,9 @@ export class DbService {
   private async seedPatients(patients: GeneratedPatient[]) {
     this.logger.info(`Processing ${patients.length} patients...`);
     const createdPatients: Patient[] = [];
+
+    const bar = ProgressUtils.createBar(ProgressUtils.getStandardFormat('Seeding Patients'));
+    bar.start(patients.length, 0);
 
     for (const p of patients) {
       try {
@@ -109,7 +118,9 @@ export class DbService {
       } catch (error) {
         this.logger.error(`Failed to create patient ${p.fullName}`, error);
       }
+      bar.increment();
     }
+    bar.stop();
     this.logger.info(`✅ Seeded ${createdPatients.length} new patients.`);
     return createdPatients;
   }
@@ -137,6 +148,9 @@ export class DbService {
     let appointmentCount = 0;
     const targetAppointments = this.env.APPOINTMENTS_COUNT;
 
+    const bar = ProgressUtils.createBar(ProgressUtils.getStandardFormat('Generating Appointments'));
+    bar.start(targetAppointments, 0);
+
     while (appointmentCount < targetAppointments) {
       const doctor = faker.helpers.arrayElement(allDoctors);
       const patient = faker.helpers.arrayElement(createdPatients);
@@ -163,10 +177,12 @@ export class DbService {
           },
         });
         appointmentCount++;
+        bar.increment();
       } catch (error) {
         this.logger.error('Failed to create appointment', error);
       }
     }
+    bar.stop();
     this.logger.info(`✅ Generated ${appointmentCount} appointments.`);
   }
 }

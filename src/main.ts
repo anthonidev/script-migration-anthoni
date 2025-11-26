@@ -11,8 +11,10 @@ async function main() {
   const env = validateEnv();
   const logger = new Logger(env.LOG_LEVEL);
 
+  logger.emptyLine();
   logger.info('🚀 Doctoralia Migration Pipeline');
-  logger.info('================================');
+  logger.separator('=');
+  logger.emptyLine();
 
   // Services
   const scraper = new DoctoraliaScraper(env);
@@ -21,21 +23,30 @@ async function main() {
 
   try {
     // 1. Scrape Data
+    logger.info('STEP 1: SCRAPING DATA');
+    logger.separator();
     logger.info('🕷️ Starting Scraper...');
     const doctors = await scraper.scrape();
     await scraper.close();
     logger.info(`✅ Scraped ${doctors.length} doctors.`);
+    logger.emptyLine();
 
     // 2. Generate Data
+    logger.info('STEP 2: GENERATING DATA');
+    logger.separator();
     logger.info('🎲 Starting Data Generator...');
     const patients = generator.generate();
     logger.info(`✅ Generated ${patients.length} patients.`);
+    logger.emptyLine();
 
     // 3. Seed Database
+    logger.info('STEP 3: SEEDING DATABASE');
+    logger.separator();
     logger.info('💾 Starting Database Seeder...');
     await db.connect();
     await db.seedDatabase(doctors, patients);
     logger.info('✅ Database seeded successfully.');
+    logger.emptyLine();
   } catch (error) {
     logger.error('❌ Pipeline failed:', error);
     process.exit(1);

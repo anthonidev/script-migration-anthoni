@@ -2,7 +2,7 @@ services:
   postgres:
     image: postgres:16-alpine
     ports:
-      - "5432:5432"
+      - '5432:5432'
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -10,7 +10,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}']
       interval: 5s
       timeout: 5s
       retries: 5
@@ -26,7 +26,10 @@ services:
       SCRAPING_SPECIALTIES: ${SCRAPING_SPECIALTIES}
       PATIENTS_COUNT: ${PATIENTS_COUNT}
       APPOINTMENTS_COUNT: ${APPOINTMENTS_COUNT}
+      FORCE_COLOR: '1'
     command: sh -c "pnpm prisma migrate deploy && pnpm start"
+    volumes:
+      - ./data:/app/data
 
   studio:
     build: .
@@ -34,7 +37,7 @@ services:
       postgres:
         condition: service_healthy
     ports:
-      - "5555:5555"
+      - '5555:5555'
     environment:
       DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?schema=clinic
     command: sh -c "pnpm prisma studio"

@@ -2,13 +2,18 @@ import fs from 'fs/promises';
 import path from 'path';
 import puppeteer, { Browser } from 'puppeteer';
 import { Env } from '../config/env.js';
+import { Logger } from '../utils/logger.js';
+import { ProgressUtils } from '../utils/progress.js';
 
 import { ScrapedDoctor } from '../types/index.js';
 
 export class DoctoraliaScraper {
   private browser: Browser | null = null;
+  private logger: Logger;
 
-  constructor(private env: Env) {}
+  constructor(private env: Env) {
+    this.logger = new Logger(env.LOG_LEVEL);
+  }
 
   async initialize() {
     this.browser = await puppeteer.launch({
@@ -30,30 +35,37 @@ export class DoctoraliaScraper {
     const specialties = this.env.SCRAPING_SPECIALTIES.split(',').map((s) => s.trim());
     const results: ScrapedDoctor[] = [];
 
+    const totalTasks = cities.length * specialties.length;
+    const bar = ProgressUtils.createBar(ProgressUtils.getStandardFormat('Scraping Progress'));
+    bar.start(totalTasks, 0);
+
     for (const city of cities) {
       const domain = this.getDomainForCity(city);
       if (!domain) {
-        console.warn(`⚠️ No domain mapping for city: ${city}, skipping.`);
+        this.logger.warn(`⚠️ No domain mapping for city: ${city}, skipping.`);
+        bar.increment(specialties.length); // Skip all specialties for this city
         continue;
       }
 
       for (const specialty of specialties) {
-        console.log(`🔍 Scraping ${specialty} in ${city} (${domain})...`);
+        // this.logger.info(`🔍 Scraping ${specialty} in ${city} (${domain})...`); // Verbose log
         try {
           const doctors = await this.scrapeSearchPage(domain, city, specialty);
           results.push(...doctors);
         } catch (error) {
-          console.error(`❌ Error scraping ${city}/${specialty}:`, error);
+          this.logger.error(`❌ Error scraping ${city}/${specialty}:`, error);
         }
+        bar.increment();
       }
     }
+    bar.stop();
 
     // Save to JSON
     const dataDir = path.join(process.cwd(), 'data');
     await fs.mkdir(dataDir, { recursive: true });
     await fs.writeFile(path.join(dataDir, 'doctors.json'), JSON.stringify(results, null, 2));
 
-    console.log(`💾 Saved ${results.length} doctors to data/doctors.json`);
+    this.logger.info(`💾 Saved ${results.length} doctors to data/doctors.json`);
     return results;
   }
 
@@ -112,7 +124,7 @@ export class DoctoraliaScraper {
           const doctor = await this.scrapeDoctorProfile(link, city, specialty);
           if (doctor) doctors.push(doctor);
         } catch (e) {
-          console.error(`Failed to scrape profile ${link}:`, e);
+          this.logger.error(`Failed to scrape profile ${link}:`, e);
         }
       }
     } finally {
@@ -136,7 +148,7 @@ export class DoctoraliaScraper {
 
       // Extract basic info
       const fullName = await page
-        .$eval('h1', (el) => el.textContent?.trim() || '')
+        .$eval('h1', (el) => el.textContent?.trim().replace(/\s+/g, ' ') || '')
         .catch(() => 'Unknown');
       const address = await page
         .$eval('[data-testid="address-link"]', (el) => el.textContent?.trim() || '')
@@ -144,14 +156,14 @@ export class DoctoraliaScraper {
 
       // Rating
       const rating = await page
-        .$eval('[data-testid="doctor-star-rating"]', (el) => {
-          const text = el.textContent?.trim();
-          return text ? parseFloat(text.replace(',', '.')) : 0;
+        .$eval('.unified-doctor-header-info__rating-text', (el) => {
+          const score = el.getAttribute('data-score');
+          return score ? parseFloat(score) : 0;
         })
         .catch(() => 0);
 
       const reviewCount = await page
-        .$eval('[data-testid="reviews-count"]', (el) => {
+        .$eval('.unified-doctor-header-info__rating-text span', (el) => {
           const text = el.textContent?.replace(/\D/g, '');
           return text ? parseInt(text) : 0;
         })
@@ -213,7 +225,7 @@ export class DoctoraliaScraper {
         availability,
       };
     } catch (error) {
-      console.error(`Error scraping profile ${url}:`, error);
+      this.logger.error(`Error scraping profile ${url}:`, error);
       return null;
     } finally {
       await page.close();

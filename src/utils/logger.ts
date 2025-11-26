@@ -1,3 +1,5 @@
+import chalk from 'chalk';
+
 export enum LogLevel {
   DEBUG = 0,
   INFO = 1,
@@ -27,7 +29,27 @@ export class Logger {
 
   private formatMessage(level: string, message: string): string {
     const timestamp = new Date().toISOString();
-    return `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+    const coloredTimestamp = chalk.gray(`[${timestamp}]`);
+
+    let coloredLevel = '';
+    switch (level) {
+      case 'DEBUG':
+        coloredLevel = chalk.gray(`[${level}]`);
+        break;
+      case 'INFO':
+        coloredLevel = chalk.blue(`[${level}]`);
+        break;
+      case 'WARN':
+        coloredLevel = chalk.yellow(`[${level}]`);
+        break;
+      case 'ERROR':
+        coloredLevel = chalk.red(`[${level}]`);
+        break;
+      default:
+        coloredLevel = `[${level}]`;
+    }
+
+    return `${coloredTimestamp} ${coloredLevel} ${message}`;
   }
 
   debug(message: string, ...args: unknown[]) {
@@ -52,5 +74,13 @@ export class Logger {
     if (this.level <= LogLevel.ERROR) {
       console.error(this.formatMessage('ERROR', message), ...args);
     }
+  }
+
+  separator(char: string = '-') {
+    console.log(chalk.gray(char.repeat(60)));
+  }
+
+  emptyLine() {
+    console.log('');
   }
 }

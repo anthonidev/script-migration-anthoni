@@ -11,9 +11,6 @@ dist/
 .env.local
 .env.*.local
 
-# Data files (optional - remove if you want to commit scraped data)
-data/*.json
-
 # Logs
 *.log
 logs/
@@ -48,3 +45,6 @@ coverage/
 # Docker
 .docker/
 *.pid
+.claude
+
+input-prueba.pdf
