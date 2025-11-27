@@ -21,7 +21,7 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?schema=clinic
+      DATABASE_URL: 'postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?schema=clinic&sslmode=disable'
       SCRAPING_CITIES: ${SCRAPING_CITIES}
       SCRAPING_SPECIALTIES: ${SCRAPING_SPECIALTIES}
       PATIENTS_COUNT: ${PATIENTS_COUNT}
@@ -44,7 +44,7 @@ services:
     ports:
       - '5555:5555'
     environment:
-      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?schema=clinic
+      DATABASE_URL: 'postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?schema=clinic&sslmode=disable'
     command: sh -c "pnpm prisma studio"
 
 volumes:

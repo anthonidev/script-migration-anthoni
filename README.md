@@ -112,10 +112,14 @@ Comandos definidos en `package.json` para el ciclo de vida de la aplicación.
 | `format`        | `pnpm run format`        | Formateo automático (Prettier).            |
 | `test`          | `pnpm run test`          | Ejecuta suite de pruebas (Vitest).         |
 
-> ⏱️ **Tiempos Estimados:**
+> ⏱️ **Tiempos Estimados de Ejecución:**
 >
-> - Con Scraping (Concurrencia=3): **~2-3 minutos** (promedio).
-> - Saltando Scraping (`-SkipScraping`): **~15 segundos**.
+> | Escenario                | Tiempo Estimado |
+> | :----------------------- | :-------------- |
+> | **Build + Scraping**     | 2 - 4 min       |
+> | **Rebuild + Scraping**   | 1 - 2 min       |
+> | **Build + Cache Data**   | 1 - 2 min       |
+> | **Rebuild + Cache Data** | 0.1 - 0.5 seg   |
 >
 > 💡 **Optimizaciones Implementadas:**
 >

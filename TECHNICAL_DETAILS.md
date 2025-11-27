@@ -53,7 +53,14 @@ He simplificado el proceso de despliegue con scripts automáticos que manejan to
 
 Estos scripts levantan los servicios, ejecutan el pipeline de migración y abren automáticamente la interfaz de visualización de datos.
 
-⏱️ **Tiempo de Ejecución:** ~2-3 minutos (optimizado con concurrencia paralela que procesa múltiples ciudades/especialidades simultáneamente, reduciendo el tiempo en 60-70% vs. enfoque secuencial)
+⏱️ **Tiempos Estimados de Ejecución:**
+
+> | Escenario                | Tiempo Estimado |
+> | :----------------------- | :-------------- |
+> | **Build + Scraping**     | 2 - 4 min       |
+> | **Rebuild + Scraping**   | 1 - 2 min       |
+> | **Build + Cache Data**   | 1 - 2 min       |
+> | **Rebuild + Cache Data** | 0.1 - 0.5 seg   |
 
 ![Terminal](./example/terminal.png)
 
