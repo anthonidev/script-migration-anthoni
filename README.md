@@ -1,206 +1,138 @@
-# Migración de Datos de Doctoralia
+# 🏥 Doctoralia ETL Migration
 
-Este proyecto es una solución automatizada para la extracción (scraping), transformación y carga de datos desde Doctoralia hacia una base de datos PostgreSQL. Diseñado para ser robusto, escalable y fácil de desplegar mediante Docker.
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![Puppeteer](https://img.shields.io/badge/Puppeteer-40B5A4?style=flat-square&logo=puppeteer&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
 
-## 💡 Decisiones de Diseño: Enfoque Pragmático
-
-He tomado decisiones técnicas deliberadas para resolver el problema de la manera más eficiente posible, evitando la sobreingeniería:
-
-- **¿Por qué no NestJS?**: Aunque tengo experiencia construyendo APIs robustas con **NestJS**, este desafío es un proceso **ETL** (Extracción, Transformación, Carga), no un servicio web. Añadir NestJS hubiera introducido complejidad y _boilerplate_ innecesarios sin aportar valor real al objetivo de la migración.
-- **¿Por qué TypeScript para todo?**: A menudo se usa Python para scraping, pero al mantener todo en **TypeScript** (Scraping + Scripting + ORM), logro una **coherencia de tipos total** y un flujo de desarrollo unificado, sin necesidad de cambiar de contexto o gestionar múltiples runtimes.
-- **Uso Exclusivo de TypeScript**: He priorizado el uso de TypeScript para aprovechar su sistema de tipos estáticos, lo que reduce errores en tiempo de ejecución y mejora la mantenibilidad del código.
-
-## ✨ Funcionalidades Destacadas
-
-He diseñado este proyecto enfocándome en las mejores prácticas de ingeniería de software:
-
-- **Arquitectura Modular**: Separación clara de responsabilidades (Scrapers, Generadores, Servicios).
-- **Contenerización Completa**: Uso de Docker y Docker Compose para un entorno reproducible y aislado.
-- **Pipeline ETL Automatizado**: Extracción, transformación y carga de datos sin intervención manual.
-- **Manejo de Errores y Logs**: Sistema de logging detallado para monitorear cada paso del proceso.
-- **Datos Realistas**: Generación de pacientes y citas coherentes para pruebas de calidad.
-- **Calidad de Código**: Uso de **ESLint**, **Prettier** y **Husky** (pre-commit hooks) para garantizar un código limpio y consistente.
-- **Pruebas Unitarias**: Suite de tests con **Vitest** para asegurar la robustez y fiabilidad de los componentes críticos.
-- **Configuración Flexible**: Control total mediante variables de entorno.
-- **Documentación Clara**: Guías paso a paso para facilitar la evaluación.
-
-## 📋 Requisitos Previos
-
-Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
-
-1.  **Docker Desktop**: Esencial para ejecutar el entorno contenerizado (Base de datos, App, Prisma Studio).
-    ![Docker Desktop](./example/docker-desktop.png)
-2.  **Git**: Para clonar el repositorio.
-3.  **Terminal**: PowerShell (Windows) o Bash (Linux/Mac).
-
-### ⚙️ Configuración Inicial
-
-Antes de ejecutar cualquier comando, es **fundamental** configurar las variables de entorno:
-
-1.  Copia el archivo de ejemplo:
-    ```bash
-    cp .env.example .env
-    ```
-2.  El archivo `.env` ya viene pre-configurado con valores por defecto listos para probar el proyecto.
+Solución automatizada de **Scraping, Transformación y Carga (ETL)** diseñada para extraer datos de Doctoralia y migrarlos a PostgreSQL. El sistema prioriza la robustez, el tipado estático y el despliegue contenerizado.
 
 ---
 
-## 🚀 Cómo Levantar el Proyecto
+## 🚀 Quick Start (En menos de 1 min)
 
-He simplificado el proceso de despliegue con scripts automáticos que manejan todo el ciclo de vida de la aplicación.
+**Requisitos:** Docker Desktop, Git y Terminal.
 
-### Opción 1: Ejecución Automática (Recomendada)
+### 1. Configuración Inicial
 
-Estos scripts levantan los servicios, ejecutan el pipeline de migración y abren automáticamente la interfaz de visualización de datos.
-
-![Terminal](./example/terminal.png)
-
-**En Windows (PowerShell):**
-
-```powershell
-./start.ps1
-```
-
-_Si tienes problemas de permisos, ejecuta primero:_ `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
-
-**En Linux / Mac:**
+Crea tu archivo de entorno (ya pre-configurado para funcionar _out-of-the-box_):
 
 ```bash
-chmod +x start.sh
-./start.sh
+cp .env.example .env
 ```
 
-**Opciones Adicionales:**
+### 2. Ejecución Automática ("One-Click")
 
-Si ya has descargado los datos previamente y quieres ahorrar tiempo (y evitar peticiones a Doctoralia), puedes saltar el scraping:
+Este script levanta los servicios, ejecuta el pipeline y abre la visualización de datos.
 
-```powershell
-# Windows
-./start.ps1 -SkipScraping
+| OS                       | Comando Estándar                  |
+| :----------------------- | :-------------------------------- |
+| **Windows (PowerShell)** | `./start.ps1`                     |
+| **Linux / Mac**          | `chmod +x start.sh && ./start.sh` |
 
-# Linux/Mac
-./start.sh --skip-scraping
-```
+> [!TIP]
+> **Windows:** Si tienes problemas de permisos, ejecuta primero:
+> `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
 
-### Opción 2: Ejecución Manual con Docker Compose
+> **⚡ Opcional: Saltar Scraping (Uso de Caché)**
+> Si ya tienes datos descargados o quieres ahorrar tiempo evitando peticiones a Doctoralia:
+>
+> ```bash
+> # Windows
+> ./start.ps1 -SkipScraping
+>
+> # Linux / Mac
+> ./start.sh --skip-scraping
+> ```
 
-Si prefieres tener control total sobre los comandos:
+### 3. Resultados
 
-1.  **Levantar servicios:**
-    ```bash
-    docker-compose up -d --build
-    ```
-2.  **Ver logs en tiempo real:**
-    ```bash
-    docker-compose logs -f app
-    ```
-3.  **Acceder a los datos:**
-    Una vez finalizado, abre tu navegador en [http://localhost:5555](http://localhost:5555) para ver Prisma Studio.
-
----
-
-## 🔄 Qué Hace el Pipeline de Migración
-
-El sistema ejecuta un proceso ETL (Extract, Transform, Load) secuencial definido en `src/main.ts`:
-
-### 1. Extracción (Scraping)
-
-- **Tecnología**: Puppeteer (navegador headless).
-- **Proceso**: Navega por Doctoralia buscando doctores según las ciudades y especialidades configuradas.
-- **Detalles**: Extrae información detallada (nombre, especialidad, dirección, precio, servicios).
-- **Optimización**: Los datos extraídos se guardan en `data/doctors.json`. Si se usa la opción de "Skip Scraping", el sistema lee directamente este archivo, haciendo el proceso instantáneo.
-
-### 2. Generación de Datos (Mocking)
-
-- **Tecnología**: Faker.js.
-- **Proceso**: Genera pacientes ficticios con datos realistas (nombres, correos, teléfonos) para poblar el sistema y simular un entorno de producción real.
-- **Volumen**: Configurable mediante variables de entorno (por defecto 200 pacientes).
-
-### 3. Carga (Seeding)
-
-- **Tecnología**: Prisma ORM.
-- **Proceso**: Inserta relacionalmente los doctores extraídos y los pacientes generados en la base de datos PostgreSQL.
-- **Relaciones**: Crea citas aleatorias vinculando pacientes con doctores para demostrar la integridad referencial del esquema.
-
-![Prisma Studio](./example/prisma-studio.png)
+Accede al visualizador de datos (Prisma Studio) en: http://localhost:5555
 
 ---
 
-## ⚠️ Limitaciones y Supuestos Importantes
+## 🧠 Filosofía de Diseño
 
-Para la evaluación de esta prueba técnica, he tomado las siguientes consideraciones:
+- **TypeScript Monorepo**: Un solo lenguaje para Scraping, Scripting y ORM. Garantiza coherencia de tipos y evita el cambio de contexto entre lenguajes.
+- **Enfoque Pragmático (No NestJS)**: Al ser un proceso ETL (batch) y no un servicio REST persistente, se evitó la sobreingeniería de un framework web completo en favor de una arquitectura modular ligera.
+- **Ingeniería de Software**: Incluye Linter (ESLint), Formatter (Prettier), Hooks (Husky) y Tests (Vitest) para asegurar calidad profesional.
 
-1.  **Rate Limiting y Ética de Scraping**:
-    - El scraper tiene configurados retrasos aleatorios entre peticiones para no saturar los servidores de Doctoralia.
-    - **Limitación**: Por defecto, se extraen pocos doctores (`MAX_DOCTORS_PER_SEARCH=2`) para que la prueba sea rápida. Esto es configurable en el archivo `.env`.
-
-2.  **Persistencia de Datos**:
-    - La base de datos vive en un volumen de Docker. Si borras el contenedor y el volumen, los datos se perderán.
-    - El archivo `data/doctors.json` actúa como una caché persistente del scraping.
-
-3.  **Validación de Datos**:
-    - Se asume que la estructura HTML de Doctoralia se mantiene constante. Si Doctoralia cambia sus clases CSS, el scraper podría necesitar ajustes (típico en proyectos de scraping).
-
-4.  **Entorno de Ejecución**:
-    - El proyecto asume que los puertos `5432` (Postgres) y `5555` (Prisma Studio) están libres en tu máquina host.
+> 📘 **¿Quieres profundizar más?**
+> Consulta la [Documentación Técnica Detallada](./TECHNICAL_DETAILS.md) para ver diagramas, explicación del pipeline, estructura de carpetas y decisiones de arquitectura a fondo.
 
 ---
 
-## ⚙️ Configuración Avanzada (.env)
+## 🔄 Pipeline de Migración
 
-Puedes ajustar el comportamiento editando el archivo `.env`:
+El sistema ejecuta un proceso ETL secuencial:
 
-| Variable                       | Descripción                               | Default                           |
-| ------------------------------ | ----------------------------------------- | --------------------------------- |
-| `SCRAPING_CITIES`              | Ciudades a buscar (separadas por coma)    | `Lima,Bogotá,Madrid`              |
-| `SCRAPING_SPECIALTIES`         | Especialidades a buscar                   | `Cardiólogo,Dermatólogo,Pediatra` |
-| `MAX_DOCTORS_PER_SEARCH`       | Máximo de doctores a extraer por búsqueda | `2`                               |
-| `MAX_SERVICES_COUNT`           | Máximo de servicios a extraer por doctor  | `5`                               |
-| `MAX_AVAILABILITY_SLOTS_COUNT` | Máximo de horarios a extraer por doctor   | `5`                               |
-| `PATIENTS_COUNT`               | Cantidad de pacientes falsos a generar    | `200`                             |
-| `APPOINTMENTS_COUNT`           | Cantidad de citas a generar               | `1000`                            |
-| `SCRAPING_DELAY_MS`            | Retraso entre peticiones (ms)             | `1500`                            |
+1.  **Extracción (Scraping)**: Puppeteer navega Doctoralia buscando doctores por especialidad y ciudad.
+2.  **Transformación**: Se limpian y normalizan los datos (precios, direcciones, teléfonos). Si falla el scraping, se generan datos sintéticos con Faker.js.
+3.  **Carga (Seeding)**: Prisma inserta los datos relacionales (Doctores, Pacientes, Citas) en PostgreSQL.
+
+---
+
+## ⚙️ Configuración (.env)
+
+El comportamiento del scraper y generador es totalmente personalizable.
+
+| Variable                 | Descripción                       | Default (Safe)         |
+| :----------------------- | :-------------------------------- | :--------------------- |
+| `SCRAPING_CITIES`        | Objetivos de búsqueda (CSV)       | Lima,Bogotá,Madrid     |
+| `SCRAPING_SPECIALTIES`   | Especialidades a buscar           | Cardiólogo,Dermatólogo |
+| `MAX_DOCTORS_PER_SEARCH` | Límite de doctores por ciudad     | 2                      |
+| `MAX_SERVICES_COUNT`     | Servicios a extraer por doctor    | 5                      |
+| `MAX_AVAILABILITY_SLOTS` | Horarios a extraer                | 5                      |
+| `PATIENTS_COUNT`         | Pacientes sintéticos a generar    | 200                    |
+| `APPOINTMENTS_COUNT`     | Citas aleatorias a crear          | 1000                   |
+| `SCRAPING_DELAY_MS`      | Pausa entre peticiones (Anti-ban) | 1500                   |
 
 > [!IMPORTANT]
-> **Nota sobre Uso Responsable:**
-> Las configuraciones por defecto (especialmente `MAX_DOCTORS_PER_SEARCH=2`) están diseñadas intencionalmente para un **uso controlado**.
->
-> El objetivo es realizar una prueba técnica funcional **sin saturar ni afectar la disponibilidad de la página de Doctoralia**. Por favor, mantén estos valores bajos durante las pruebas para ser respetuosos con el servidor destino.
+> **Ética de Scraping:** Los valores por defecto (`MAX_DOCTORS_PER_SEARCH=2`) son bajos intencionalmente para realizar la prueba técnica sin saturar los servidores de Doctoralia.
 
 ---
 
 ## 🛠️ Scripts de Desarrollo
 
-El proyecto utiliza **pnpm** como gestor de paquetes. Los scripts están definidos en `package.json`:
+Comandos definidos en `package.json` para el ciclo de vida de la aplicación.
 
-| Script          | Comando                  | Descripción                                                        |
-| --------------- | ------------------------ | ------------------------------------------------------------------ |
-| `start`         | `pnpm start`             | Ejecuta el pipeline principal (`src/main.ts`).                     |
-| `generate:data` | `pnpm run generate:data` | Ejecuta el **scraping** y guarda los datos en `data/doctors.json`. |
-| `build`         | `pnpm run build`         | Compila el código TypeScript a JavaScript.                         |
-| `lint`          | `pnpm run lint`          | Analiza el código en busca de errores con ESLint.                  |
-| `format`        | `pnpm run format`        | Formatea todo el código automáticamente con Prettier.              |
-| `prepare`       | `pnpm run prepare`       | Configura los hooks de Husky.                                      |
-| `test`          | `pnpm run test`          | Ejecuta la suite de pruebas unitarias con **Vitest**.              |
+| Script          | Comando                  | Acción                                     |
+| :-------------- | :----------------------- | :----------------------------------------- |
+| `start`         | `pnpm start`             | Ejecuta el pipeline principal (Main).      |
+| `generate:data` | `pnpm run generate:data` | Ejecuta solo el scraping (`doctors.json`). |
+| `build`         | `pnpm run build`         | Compila TypeScript a JavaScript.           |
+| `lint`          | `pnpm run lint`          | Análisis estático de código (ESLint).      |
+| `format`        | `pnpm run format`        | Formateo automático (Prettier).            |
+| `test`          | `pnpm run test`          | Ejecuta suite de pruebas (Vitest).         |
 
-> [!TIP]
-> **Ejecución con Docker:**
-> Dado que el entorno está contenerizado, se recomienda ejecutar estos scripts **dentro del contenedor** para asegurar que todas las dependencias del sistema estén disponibles.
+> ⏱️ **Tiempos Estimados:**
 >
-> ```bash
-> # Ejemplo: Ejecutar el scraping manualmente dentro del contenedor 'app'
-> docker-compose run --rm app pnpm run generate:data
->
-> # Ejemplo: Ejecutar los tests
-> docker-compose run --rm app pnpm test
-> ```
->
-> ![Ejecución de Tests](./example/test.png)
+> - Con Scraping: **5 - 7 minutos** (promedio).
+> - Saltando Scraping (`-SkipScraping`): **~15 segundos**.
+
+### 🐳 Ejecución dentro de Docker (Recomendado)
+
+Para asegurar consistencia de dependencias, ejecuta los scripts usando el contenedor:
+
+```bash
+# Ejemplo: Ejecutar scraping manualmente
+docker-compose run --rm app pnpm run generate:data
+
+# Ejemplo: Correr Tests Unitarios
+docker-compose run --rm app pnpm test
+```
 
 ---
 
-## 📬 Contacto
+## ⚠️ Limitaciones y Notas
 
-**Anthoni Portocarrero Rodriguez**
-[LinkedIn](https://www.linkedin.com/in/anthoni-portotocarrero-rodriguez-06089119a/)
-[Website](https://www.anthonidev.site)
+- **Persistencia**: La DB usa un volumen Docker; eliminarlo borrará los datos relacionales (pero `data/doctors.json` persiste).
+- **Rate Limiting**: El scraper incluye retardos aleatorios para simular comportamiento humano.
+- **Puertos**: Asegúrate que los puertos `5432` y `5555` estén libres.
+
+---
+
+### Anthoni Portocarrero Rodriguez
+
+[LinkedIn](https://www.linkedin.com/in/anthoni-portotocarrero-rodriguez-06089119a) | [Website](https://www.anthonidev.site)

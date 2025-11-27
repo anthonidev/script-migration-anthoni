@@ -362,383 +362,391 @@
     ]
   },
   {
-    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
+    "fullName": "Dr. Luis Carlos Burbano Ortiz",
     "specialty": "Cardiólogo",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 422,
-    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#address-id=72116&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
+    "reviewCount": 55,
+    "sourceProfileUrl": "https://www.doctoralia.co/luis-carlos-burbano-ortiz/cardiologo/bogota#address-id=99993&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
     "treatments": [
       {
-        "name": "Ecocardiograma",
-        "price": 200,
-        "currency": "PEN"
-      },
-      {
-        "name": "Electrocardiografía",
-        "price": 70,
-        "currency": "PEN"
-      },
-      {
-        "name": "Holter de presión arterial",
+        "name": "Consulta cardiología",
         "price": 250,
         "currency": "PEN"
       },
       {
-        "name": "Monitoreo ambulatorio de presión arterial (MAPA)",
-        "price": 170,
+        "name": "Consulta control por cardiología",
+        "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Prueba cardiaca de esfuerzo",
-        "price": 170,
+        "name": "Ecocardiograma de estrés con prueba de esfuerzo",
+        "price": 400,
+        "currency": "PEN"
+      },
+      {
+        "name": "Ecocardiograma Transesofágico",
+        "price": 400,
+        "currency": "PEN"
+      },
+      {
+        "name": "Ecocardiograma Transtorácico",
+        "price": 250,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-12-23T08:00:00.000Z",
-        "endAt": "2025-12-23T08:30:00.000Z",
+        "startAt": "2025-12-01T15:00:00.000Z",
+        "endAt": "2025-12-01T15:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-23T11:00:00.000Z",
-        "endAt": "2025-12-23T11:30:00.000Z",
+        "startAt": "2025-12-01T18:00:00.000Z",
+        "endAt": "2025-12-01T18:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-29T09:00:00.000Z",
-        "endAt": "2025-12-29T09:30:00.000Z",
+        "startAt": "2025-12-02T08:30:00.000Z",
+        "endAt": "2025-12-02T09:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-29T11:00:00.000Z",
-        "endAt": "2025-12-29T11:30:00.000Z",
+        "startAt": "2025-12-02T12:00:00.000Z",
+        "endAt": "2025-12-02T12:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-30T09:00:00.000Z",
-        "endAt": "2025-12-30T09:30:00.000Z",
+        "startAt": "2025-12-03T08:30:00.000Z",
+        "endAt": "2025-12-03T09:00:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
+    "fullName": "Dr. Luis Carlos Burbano Ortiz",
     "specialty": "Cardiólogo",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 422,
-    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#address-id=72116&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
+    "reviewCount": 55,
+    "sourceProfileUrl": "https://www.doctoralia.co/luis-carlos-burbano-ortiz/cardiologo/bogota#address-id=99993&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
     "treatments": [
       {
-        "name": "Ecocardiograma",
-        "price": 200,
-        "currency": "PEN"
-      },
-      {
-        "name": "Electrocardiografía",
-        "price": 70,
-        "currency": "PEN"
-      },
-      {
-        "name": "Holter de presión arterial",
+        "name": "Consulta cardiología",
         "price": 250,
         "currency": "PEN"
       },
       {
-        "name": "Monitoreo ambulatorio de presión arterial (MAPA)",
-        "price": 170,
+        "name": "Consulta control por cardiología",
+        "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Prueba cardiaca de esfuerzo",
-        "price": 170,
+        "name": "Ecocardiograma de estrés con prueba de esfuerzo",
+        "price": 400,
+        "currency": "PEN"
+      },
+      {
+        "name": "Ecocardiograma Transesofágico",
+        "price": 400,
+        "currency": "PEN"
+      },
+      {
+        "name": "Ecocardiograma Transtorácico",
+        "price": 250,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-12-23T08:00:00.000Z",
-        "endAt": "2025-12-23T08:30:00.000Z",
+        "startAt": "2025-12-01T15:00:00.000Z",
+        "endAt": "2025-12-01T15:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-23T11:00:00.000Z",
-        "endAt": "2025-12-23T11:30:00.000Z",
+        "startAt": "2025-12-01T18:00:00.000Z",
+        "endAt": "2025-12-01T18:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-29T09:00:00.000Z",
-        "endAt": "2025-12-29T09:30:00.000Z",
+        "startAt": "2025-12-02T08:30:00.000Z",
+        "endAt": "2025-12-02T09:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-29T11:00:00.000Z",
-        "endAt": "2025-12-29T11:30:00.000Z",
+        "startAt": "2025-12-02T12:00:00.000Z",
+        "endAt": "2025-12-02T12:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-30T09:00:00.000Z",
-        "endAt": "2025-12-30T09:30:00.000Z",
+        "startAt": "2025-12-03T08:30:00.000Z",
+        "endAt": "2025-12-03T09:00:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dra. Alejandra Téllez",
+    "fullName": "Dra. JASIEL SARAI SALAS GOMEZ",
     "specialty": "Dermatólogo",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 451,
-    "sourceProfileUrl": "https://www.doctoralia.co/alejandra-tellez/dermatologo/bogota#address-id=72596&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
+    "reviewCount": 47,
+    "sourceProfileUrl": "https://www.doctoralia.co/jasiel-sarai-salas-gomez/dermatologo/bogota#address-id=92707&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
     "treatments": [
       {
         "name": "Visita Dermatología",
-        "price": 220,
+        "price": 200,
         "currency": "PEN"
       },
       {
-        "name": "Consulta Dermatología",
-        "price": 220,
+        "name": "Aplicación de toxina botulínica",
+        "price": 1.4,
         "currency": "PEN"
       },
       {
-        "name": "Ácido hialuronico labios , mentón, pómulos y ojeras",
-        "price": 1.1,
+        "name": "Biopsia de piel",
+        "price": 550,
         "currency": "PEN"
       },
       {
-        "name": "Tratamientos con láser CO2",
-        "price": 1.1,
+        "name": "Consulta en línea",
+        "price": 190,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de ojeras",
-        "price": 1.06,
+        "name": "Dermoabrasión",
+        "price": 160,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-12-02T10:50:00.000Z",
-        "endAt": "2025-12-02T11:20:00.000Z",
+        "startAt": "2025-11-27T10:00:00.000Z",
+        "endAt": "2025-11-27T10:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-05T09:50:00.000Z",
-        "endAt": "2025-12-05T10:20:00.000Z",
+        "startAt": "2025-11-27T11:00:00.000Z",
+        "endAt": "2025-11-27T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-11T08:00:00.000Z",
-        "endAt": "2025-12-11T08:30:00.000Z",
+        "startAt": "2025-11-28T08:30:00.000Z",
+        "endAt": "2025-11-28T09:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-11T10:00:00.000Z",
-        "endAt": "2025-12-11T10:30:00.000Z",
+        "startAt": "2025-11-28T09:30:00.000Z",
+        "endAt": "2025-11-28T10:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-12T08:00:00.000Z",
-        "endAt": "2025-12-12T08:30:00.000Z",
+        "startAt": "2025-12-01T09:30:00.000Z",
+        "endAt": "2025-12-01T10:00:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dra. Alejandra Téllez",
+    "fullName": "Dra. JASIEL SARAI SALAS GOMEZ",
     "specialty": "Dermatólogo",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 451,
-    "sourceProfileUrl": "https://www.doctoralia.co/alejandra-tellez/dermatologo/bogota#address-id=72596&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
+    "reviewCount": 47,
+    "sourceProfileUrl": "https://www.doctoralia.co/jasiel-sarai-salas-gomez/dermatologo/bogota#address-id=92707&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
     "treatments": [
       {
         "name": "Visita Dermatología",
-        "price": 220,
+        "price": 200,
         "currency": "PEN"
       },
       {
-        "name": "Consulta Dermatología",
-        "price": 220,
+        "name": "Aplicación de toxina botulínica",
+        "price": 1.4,
         "currency": "PEN"
       },
       {
-        "name": "Ácido hialuronico labios , mentón, pómulos y ojeras",
-        "price": 1.1,
+        "name": "Biopsia de piel",
+        "price": 550,
         "currency": "PEN"
       },
       {
-        "name": "Tratamientos con láser CO2",
-        "price": 1.1,
+        "name": "Consulta en línea",
+        "price": 190,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de ojeras",
-        "price": 1.06,
+        "name": "Dermoabrasión",
+        "price": 160,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-12-02T10:50:00.000Z",
-        "endAt": "2025-12-02T11:20:00.000Z",
+        "startAt": "2025-11-27T10:00:00.000Z",
+        "endAt": "2025-11-27T10:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-05T09:50:00.000Z",
-        "endAt": "2025-12-05T10:20:00.000Z",
+        "startAt": "2025-11-27T11:00:00.000Z",
+        "endAt": "2025-11-27T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-11T08:00:00.000Z",
-        "endAt": "2025-12-11T08:30:00.000Z",
+        "startAt": "2025-11-28T08:30:00.000Z",
+        "endAt": "2025-11-28T09:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-11T10:00:00.000Z",
-        "endAt": "2025-12-11T10:30:00.000Z",
+        "startAt": "2025-11-28T09:30:00.000Z",
+        "endAt": "2025-11-28T10:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-12T08:00:00.000Z",
-        "endAt": "2025-12-12T08:30:00.000Z",
+        "startAt": "2025-12-01T09:30:00.000Z",
+        "endAt": "2025-12-01T10:00:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dr. Jorge Andres Alvarez Mantilla",
+    "fullName": "Dra. Johanna Gómez",
     "specialty": "Pediatra",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 332,
-    "sourceProfileUrl": "https://www.doctoralia.co/jorge-andres-alvarez-mantilla/pediatra/bogota#address-id=72407&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
+    "reviewCount": 12,
+    "sourceProfileUrl": "https://www.doctoralia.co/johanna-gomez-2/pediatra/bogota#address-id=94865&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
     "treatments": [
       {
-        "name": "Consulta del adolescente",
+        "name": "Asesoría en lactancia materna",
+        "price": 200,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta de Pediatría control",
+        "price": 170,
         "currency": "PEN"
       },
       {
         "name": "Consulta de Pediatría primera vez",
-        "price": 190,
+        "price": 200,
         "currency": "PEN"
       },
       {
-        "name": "Vacunación del niño y adolescente",
+        "name": "Consulta Online Pediatría",
+        "price": 170,
         "currency": "PEN"
       },
       {
-        "name": "Desarrollo motor infantil",
-        "currency": "PEN"
-      },
-      {
-        "name": "Crecimiento y desarrollo pediátrico",
+        "name": "Control de crecimiento y desarrollo",
+        "price": 170,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-12-09T09:00:00.000Z",
-        "endAt": "2025-12-09T09:30:00.000Z",
+        "startAt": "2025-12-03T14:00:00.000Z",
+        "endAt": "2025-12-03T14:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-09T11:00:00.000Z",
-        "endAt": "2025-12-09T11:30:00.000Z",
+        "startAt": "2025-12-03T15:20:00.000Z",
+        "endAt": "2025-12-03T15:50:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-10T10:30:00.000Z",
-        "endAt": "2025-12-10T11:00:00.000Z",
+        "startAt": "2025-12-04T14:00:00.000Z",
+        "endAt": "2025-12-04T14:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-10T11:00:00.000Z",
-        "endAt": "2025-12-10T11:30:00.000Z",
+        "startAt": "2025-12-04T15:20:00.000Z",
+        "endAt": "2025-12-04T15:50:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-15T10:30:00.000Z",
-        "endAt": "2025-12-15T11:00:00.000Z",
+        "startAt": "2025-12-06T08:00:00.000Z",
+        "endAt": "2025-12-06T08:30:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dr. Jorge Andres Alvarez Mantilla",
+    "fullName": "Dra. Johanna Gómez",
     "specialty": "Pediatra",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 332,
-    "sourceProfileUrl": "https://www.doctoralia.co/jorge-andres-alvarez-mantilla/pediatra/bogota#address-id=72407&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
+    "reviewCount": 12,
+    "sourceProfileUrl": "https://www.doctoralia.co/johanna-gomez-2/pediatra/bogota#address-id=94865&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
     "treatments": [
       {
-        "name": "Consulta del adolescente",
+        "name": "Asesoría en lactancia materna",
+        "price": 200,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta de Pediatría control",
+        "price": 170,
         "currency": "PEN"
       },
       {
         "name": "Consulta de Pediatría primera vez",
-        "price": 190,
+        "price": 200,
         "currency": "PEN"
       },
       {
-        "name": "Vacunación del niño y adolescente",
+        "name": "Consulta Online Pediatría",
+        "price": 170,
         "currency": "PEN"
       },
       {
-        "name": "Desarrollo motor infantil",
-        "currency": "PEN"
-      },
-      {
-        "name": "Crecimiento y desarrollo pediátrico",
+        "name": "Control de crecimiento y desarrollo",
+        "price": 170,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-12-09T09:00:00.000Z",
-        "endAt": "2025-12-09T09:30:00.000Z",
+        "startAt": "2025-12-03T14:00:00.000Z",
+        "endAt": "2025-12-03T14:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-09T11:00:00.000Z",
-        "endAt": "2025-12-09T11:30:00.000Z",
+        "startAt": "2025-12-03T15:20:00.000Z",
+        "endAt": "2025-12-03T15:50:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-10T10:30:00.000Z",
-        "endAt": "2025-12-10T11:00:00.000Z",
+        "startAt": "2025-12-04T14:00:00.000Z",
+        "endAt": "2025-12-04T14:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-10T11:00:00.000Z",
-        "endAt": "2025-12-10T11:30:00.000Z",
+        "startAt": "2025-12-04T15:20:00.000Z",
+        "endAt": "2025-12-04T15:50:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-15T10:30:00.000Z",
-        "endAt": "2025-12-15T11:00:00.000Z",
+        "startAt": "2025-12-06T08:00:00.000Z",
+        "endAt": "2025-12-06T08:30:00.000Z",
         "modality": "in_person"
       }
     ]
@@ -874,7 +882,7 @@
     ]
   },
   {
-    "fullName": "Dr. Emiliano Grillo",
+    "fullName": "Dr. Pedro Francisco Herranz Pinto",
     "specialty": "Dermatólogo",
     "city": "Madrid",
     "address": "Madrid",
@@ -882,64 +890,62 @@
     "phoneNumber": "999888777",
     "rating": 5,
     "reviewCount": 103,
-    "sourceProfileUrl": "https://www.doctoralia.es/emiliano-grillo/dermatologo/madrid#address-id=305229&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
+    "sourceProfileUrl": "https://www.doctoralia.es/pedro-francisco-herranz-pinto/dermatologo-dermatologo-infantil/segovia#address-id=62934&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
     "treatments": [
       {
-        "name": "Consulta online",
-        "price": 167,
-        "currency": "PEN"
-      },
-      {
-        "name": "Visita Dermatología",
-        "price": 120,
-        "currency": "PEN"
-      },
-      {
         "name": "Primera visita Dermatología",
-        "price": 166,
-        "currency": "PEN"
-      },
-      {
-        "name": "Primera visita Dermatología Pediátrica",
         "price": 120,
         "currency": "PEN"
       },
       {
-        "name": "Consulta Capilar",
-        "price": 166,
+        "name": "Visitas sucesivas Dermatología",
+        "price": 100,
+        "currency": "PEN"
+      },
+      {
+        "name": "Primera visita informativa gratuita",
+        "currency": "PEN"
+      },
+      {
+        "name": "Visita Medicina Estética",
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta online",
+        "price": 100,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T11:00:00.000Z",
-        "endAt": "2025-11-27T11:30:00.000Z",
+        "startAt": "2025-12-12T19:10:00.000Z",
+        "endAt": "2025-12-12T19:40:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T13:45:00.000Z",
-        "endAt": "2025-11-27T14:15:00.000Z",
+        "startAt": "2025-12-12T20:10:00.000Z",
+        "endAt": "2025-12-12T20:40:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-04T11:00:00.000Z",
-        "endAt": "2025-12-04T11:30:00.000Z",
+        "startAt": "2025-12-12T19:10:00.000Z",
+        "endAt": "2025-12-12T19:40:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-04T13:45:00.000Z",
-        "endAt": "2025-12-04T14:15:00.000Z",
+        "startAt": "2025-12-12T20:10:00.000Z",
+        "endAt": "2025-12-12T20:40:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T11:00:00.000Z",
-        "endAt": "2025-11-27T11:30:00.000Z",
+        "startAt": "2025-01-02T15:00:00.000Z",
+        "endAt": "2025-01-02T15:30:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dr. Emiliano Grillo",
+    "fullName": "Dr. Pedro Francisco Herranz Pinto",
     "specialty": "Dermatólogo",
     "city": "Madrid",
     "address": "Madrid",
@@ -947,188 +953,184 @@
     "phoneNumber": "999888777",
     "rating": 5,
     "reviewCount": 103,
-    "sourceProfileUrl": "https://www.doctoralia.es/emiliano-grillo/dermatologo/madrid#address-id=305229&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
+    "sourceProfileUrl": "https://www.doctoralia.es/pedro-francisco-herranz-pinto/dermatologo-dermatologo-infantil/segovia#address-id=62934&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
     "treatments": [
-      {
-        "name": "Consulta online",
-        "price": 167,
-        "currency": "PEN"
-      },
-      {
-        "name": "Visita Dermatología",
-        "price": 120,
-        "currency": "PEN"
-      },
       {
         "name": "Primera visita Dermatología",
-        "price": 166,
-        "currency": "PEN"
-      },
-      {
-        "name": "Primera visita Dermatología Pediátrica",
         "price": 120,
         "currency": "PEN"
       },
       {
-        "name": "Consulta Capilar",
-        "price": 166,
+        "name": "Visitas sucesivas Dermatología",
+        "price": 100,
+        "currency": "PEN"
+      },
+      {
+        "name": "Primera visita informativa gratuita",
+        "currency": "PEN"
+      },
+      {
+        "name": "Visita Medicina Estética",
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta online",
+        "price": 100,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T11:00:00.000Z",
-        "endAt": "2025-11-27T11:30:00.000Z",
+        "startAt": "2025-12-12T19:10:00.000Z",
+        "endAt": "2025-12-12T19:40:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T13:45:00.000Z",
-        "endAt": "2025-11-27T14:15:00.000Z",
+        "startAt": "2025-12-12T20:10:00.000Z",
+        "endAt": "2025-12-12T20:40:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-04T11:00:00.000Z",
-        "endAt": "2025-12-04T11:30:00.000Z",
+        "startAt": "2025-12-12T19:10:00.000Z",
+        "endAt": "2025-12-12T19:40:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-04T13:45:00.000Z",
-        "endAt": "2025-12-04T14:15:00.000Z",
+        "startAt": "2025-12-12T20:10:00.000Z",
+        "endAt": "2025-12-12T20:40:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T11:00:00.000Z",
-        "endAt": "2025-11-27T11:30:00.000Z",
+        "startAt": "2025-01-02T15:00:00.000Z",
+        "endAt": "2025-01-02T15:30:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dra. Edurne Ruiz Lázcoz",
+    "fullName": "Dra. Raquel González Sánchez",
     "specialty": "Pediatra",
     "city": "Madrid",
     "address": "Madrid",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 9,
-    "sourceProfileUrl": "https://www.doctoralia.es/edurne-ruiz-lazcoz/pediatra/madrid#address-id=312283&is-online-only=false&filters%5Bspecializations%5D%5B%5D=58",
+    "reviewCount": 33,
+    "sourceProfileUrl": "https://www.doctoralia.es/raquel-gonzalez-sanchez/pediatra-medico-estetico/madrid#address-id=248211&is-online-only=false&filters%5Bspecializations%5D%5B%5D=58",
     "treatments": [
       {
-        "name": "Consulta breve",
-        "price": 20,
+        "name": "Mesoterapia facial",
+        "price": 75,
         "currency": "PEN"
       },
       {
-        "name": "Consulta pediátrica online",
-        "price": 25,
+        "name": "Mesoterapia para ojeras",
+        "price": 99,
         "currency": "PEN"
       },
       {
-        "name": "Seguimiento online",
-        "price": 40,
+        "name": "Limpieza facial",
+        "price": 89,
         "currency": "PEN"
       },
       {
-        "name": "Urgencias pediátricas",
-        "price": 40,
+        "name": "Consulta de valoración de Medicina Estética",
         "currency": "PEN"
       },
       {
-        "name": "Visita de revisión",
-        "price": 25,
+        "name": "Maderoterapia corporal",
+        "price": 50,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-28T16:00:00.000Z",
-        "endAt": "2025-11-28T16:30:00.000Z",
+        "startAt": "2025-12-04T15:30:00.000Z",
+        "endAt": "2025-12-04T16:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T21:45:00.000Z",
-        "endAt": "2025-11-28T22:15:00.000Z",
+        "startAt": "2025-12-04T19:30:00.000Z",
+        "endAt": "2025-12-04T20:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T08:00:00.000Z",
-        "endAt": "2025-11-29T08:30:00.000Z",
+        "startAt": "2025-12-18T15:30:00.000Z",
+        "endAt": "2025-12-18T16:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T12:45:00.000Z",
-        "endAt": "2025-11-29T13:15:00.000Z",
+        "startAt": "2025-12-18T19:30:00.000Z",
+        "endAt": "2025-12-18T20:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-01T16:00:00.000Z",
-        "endAt": "2025-12-01T16:30:00.000Z",
+        "startAt": "2025-12-04T15:30:00.000Z",
+        "endAt": "2025-12-04T16:00:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dra. Edurne Ruiz Lázcoz",
+    "fullName": "Dra. Raquel González Sánchez",
     "specialty": "Pediatra",
     "city": "Madrid",
     "address": "Madrid",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 9,
-    "sourceProfileUrl": "https://www.doctoralia.es/edurne-ruiz-lazcoz/pediatra/madrid#address-id=312283&is-online-only=false&filters%5Bspecializations%5D%5B%5D=58",
+    "reviewCount": 33,
+    "sourceProfileUrl": "https://www.doctoralia.es/raquel-gonzalez-sanchez/pediatra-medico-estetico/madrid#address-id=248211&is-online-only=false&filters%5Bspecializations%5D%5B%5D=58",
     "treatments": [
       {
-        "name": "Consulta breve",
-        "price": 20,
+        "name": "Mesoterapia facial",
+        "price": 75,
         "currency": "PEN"
       },
       {
-        "name": "Consulta pediátrica online",
-        "price": 25,
+        "name": "Mesoterapia para ojeras",
+        "price": 99,
         "currency": "PEN"
       },
       {
-        "name": "Seguimiento online",
-        "price": 40,
+        "name": "Limpieza facial",
+        "price": 89,
         "currency": "PEN"
       },
       {
-        "name": "Urgencias pediátricas",
-        "price": 40,
+        "name": "Consulta de valoración de Medicina Estética",
         "currency": "PEN"
       },
       {
-        "name": "Visita de revisión",
-        "price": 25,
+        "name": "Maderoterapia corporal",
+        "price": 50,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-28T16:00:00.000Z",
-        "endAt": "2025-11-28T16:30:00.000Z",
+        "startAt": "2025-12-04T15:30:00.000Z",
+        "endAt": "2025-12-04T16:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T21:45:00.000Z",
-        "endAt": "2025-11-28T22:15:00.000Z",
+        "startAt": "2025-12-04T19:30:00.000Z",
+        "endAt": "2025-12-04T20:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T08:00:00.000Z",
-        "endAt": "2025-11-29T08:30:00.000Z",
+        "startAt": "2025-12-18T15:30:00.000Z",
+        "endAt": "2025-12-18T16:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T12:45:00.000Z",
-        "endAt": "2025-11-29T13:15:00.000Z",
+        "startAt": "2025-12-18T19:30:00.000Z",
+        "endAt": "2025-12-18T20:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-01T16:00:00.000Z",
-        "endAt": "2025-12-01T16:30:00.000Z",
+        "startAt": "2025-12-04T15:30:00.000Z",
+        "endAt": "2025-12-04T16:00:00.000Z",
         "modality": "in_person"
       }
     ]
