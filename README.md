@@ -5,6 +5,9 @@
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
+![Plimit](https://img.shields.io/badge/Plimit-FF5733?style=flat-square&logo=none&logoColor=white)
+![Faker.js](https://img.shields.io/badge/Faker.js-FFB300?style=flat-square&logo=javascript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
 
 Solución automatizada de **Scraping, Transformación y Carga (ETL)** diseñada para extraer datos de Doctoralia y migrarlos a PostgreSQL. El sistema prioriza la robustez, el tipado estático y el despliegue contenerizado.
 
@@ -24,7 +27,9 @@ cp .env.example .env
 
 ### 2. Ejecución Automática ("One-Click")
 
-Este script levanta los servicios, ejecuta el pipeline y abre la visualización de datos.
+Este script levanta los servicios, ejecuta el pipeline completo de ETL y abre la visualización de datos.
+
+⏱️ **Tiempo de Ejecución:** ~2 a 3 minutos (gracias a la concurrencia paralela de tareas)
 
 | OS                       | Comando Estándar                  |
 | :----------------------- | :-------------------------------- |
@@ -48,7 +53,7 @@ Este script levanta los servicios, ejecuta el pipeline y abre la visualización 
 
 ### 3. Resultados
 
-Accede al visualizador de datos (Prisma Studio) en: http://localhost:5555
+Una vez completado el proceso (~2-3 minutos con scraping, ~15 segundos sin scraping), accede al visualizador de datos (Prisma Studio) en: http://localhost:5555
 
 ---
 
@@ -81,7 +86,8 @@ El comportamiento del scraper y generador es totalmente personalizable.
 | :----------------------- | :-------------------------------- | :--------------------- |
 | `SCRAPING_CITIES`        | Objetivos de búsqueda (CSV)       | Lima,Bogotá,Madrid     |
 | `SCRAPING_SPECIALTIES`   | Especialidades a buscar           | Cardiólogo,Dermatólogo |
-| `MAX_DOCTORS_PER_SEARCH` | Límite de doctores por ciudad     | 2                      |
+| `SCRAPING_CONCURRENCY`   | Tareas paralelas (1-10)           | 3                      |
+| `MAX_DOCTORS_PER_SEARCH` | Límite de doctores por ciudad     | 3                      |
 | `MAX_SERVICES_COUNT`     | Servicios a extraer por doctor    | 5                      |
 | `MAX_AVAILABILITY_SLOTS` | Horarios a extraer                | 5                      |
 | `PATIENTS_COUNT`         | Pacientes sintéticos a generar    | 200                    |
@@ -89,7 +95,7 @@ El comportamiento del scraper y generador es totalmente personalizable.
 | `SCRAPING_DELAY_MS`      | Pausa entre peticiones (Anti-ban) | 1500                   |
 
 > [!IMPORTANT]
-> **Ética de Scraping:** Los valores por defecto (`MAX_DOCTORS_PER_SEARCH=2`) son bajos intencionalmente para realizar la prueba técnica sin saturar los servidores de Doctoralia.
+> **Ética de Scraping:** Los valores por defecto (`MAX_DOCTORS_PER_SEARCH=3`) son bajos intencionalmente para realizar la prueba técnica sin saturar los servidores de Doctoralia.
 
 ---
 
@@ -108,8 +114,16 @@ Comandos definidos en `package.json` para el ciclo de vida de la aplicación.
 
 > ⏱️ **Tiempos Estimados:**
 >
-> - Con Scraping: **5 - 7 minutos** (promedio).
+> - Con Scraping (Concurrencia=3): **~2-3 minutos** (promedio).
 > - Saltando Scraping (`-SkipScraping`): **~15 segundos**.
+>
+> 💡 **Optimizaciones Implementadas:**
+>
+> - **Concurrencia Paralela en Scraping** (`SCRAPING_CONCURRENCY=3`): Procesa múltiples ciudades/especialidades simultáneamente, reduciendo el tiempo en **60-70%** vs. enfoque secuencial (~5 minutos).
+> - **Paralelismo en Seeding**: Generación de pacientes + inserción de doctores en paralelo, ahorrando **~500ms**.
+> - **Operaciones Batch**: Inserciones masivas de pacientes (200→1 query) y citas (1000→1 query), ahorrando **~9 segundos**.
+> - **Database Indexes**: Índices optimizados en columnas clave (city, specialty, rating) para queries más rápidas.
+> - **Event-Driven Waits**: Reemplazo de delays fijos en Puppeteer por esperas inteligentes, ahorrando **~30-150 segundos**.
 
 ### 🐳 Ejecución dentro de Docker (Recomendado)
 

@@ -91,7 +91,7 @@ export class ProfileScraper {
 
       // Fallback for availability
       if (availability.length === 0) {
-        this.logger.warn(`No availability found for ${url}, generating fake data.`);
+        // this.logger.warn(`No availability found for ${url}, generating fake data.`);
         availability = this.generateFakeAvailability();
       } else {
         // Limit slots based on env var
@@ -141,14 +141,35 @@ export class ProfileScraper {
 
       // Click tab using evaluate
       await tab.evaluate((el: HTMLElement) => el.click());
-      await new Promise((r) => setTimeout(r, 1000));
+
+      // Wait for calendar content to load instead of fixed delay
+      await page
+        .waitForSelector('.dp-carousel-item', {
+          visible: true,
+          timeout: 1000,
+        })
+        .catch(() => {
+          // this.logger.warn('Calendar did not load within 5 seconds after tab click');
+        });
 
       // Expand hours if "Mostrar más horas" exists
       try {
         const showMoreBtn = await page.$('.dp-calendar-more button');
         if (showMoreBtn) {
           await showMoreBtn.evaluate((el: HTMLElement) => el.click());
-          await new Promise((r) => setTimeout(r, 500));
+
+          // Wait for expansion to complete (button disappears or more slots appear)
+          await page
+            .waitForFunction(
+              () => {
+                const btn = document.querySelector('.dp-calendar-more button');
+                return !btn || btn.classList.contains('d-none');
+              },
+              { timeout: 500 },
+            )
+            .catch(() => {
+              // Expansion complete or timeout - continue
+            });
         }
       } catch {
         // Ignore

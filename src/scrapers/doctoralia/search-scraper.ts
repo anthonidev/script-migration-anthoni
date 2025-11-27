@@ -1,4 +1,5 @@
 import { Page } from 'puppeteer';
+import pLimit from 'p-limit';
 import { Env } from '../../config/env.js';
 import { Logger } from '../../utils/logger.js';
 import { ScrapedDoctor } from '../../types/index.js';
@@ -56,14 +57,22 @@ export class SearchScraper {
         })
         .slice(0, this.env.MAX_DOCTORS_PER_SEARCH); // Limit doctors per search
 
-      for (const link of doctorLinks) {
-        try {
-          const doctor = await this.profileScraper.scrapeDoctorProfile(link, city, specialty);
-          if (doctor) doctors.push(doctor);
-        } catch (e) {
-          this.logger.error(`Failed to scrape profile ${link}:`, e);
-        }
-      }
+      // Scrape profiles with concurrency control
+      const limit = pLimit(this.env.SCRAPING_CONCURRENCY);
+      const profilePromises = doctorLinks.map((link) =>
+        limit(async () => {
+          try {
+            const doctor = await this.profileScraper.scrapeDoctorProfile(link, city, specialty);
+            return doctor;
+          } catch (e) {
+            this.logger.error(`Failed to scrape profile ${link}:`, e);
+            return null;
+          }
+        }),
+      );
+
+      const profiles = await Promise.all(profilePromises);
+      doctors.push(...profiles.filter((d): d is ScrapedDoctor => d !== null));
     } catch (error) {
       this.logger.error(`Error scraping search page for ${city}/${specialty}:`, error);
     }

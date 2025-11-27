@@ -37,6 +37,9 @@ model Doctor {
   availability     DoctorAvailability[]
   appointments     Appointment[]
 
+  @@index([city, specialty], name: "idx_doctors_city_specialty")
+  @@index([rating], name: "idx_doctors_rating")
+  @@index([sourceProfileUrl], name: "idx_doctors_source_url")
   @@map("doctors")
 }
 
@@ -73,8 +76,11 @@ model Patient {
   documentNumber String?       @map("document_number") @db.VarChar(32)
   phoneNumber    String?       @map("phone_number") @db.VarChar(32)
   email          String?
+  createdAt      DateTime      @default(now()) @map("created_at") @db.Timestamptz
   appointments   Appointment[]
 
+  @@index([email], name: "idx_patients_email")
+  @@index([createdAt], name: "idx_patients_created_at")
   @@map("patients")
 }
 

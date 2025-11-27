@@ -57,6 +57,23 @@ class SimpleProgressBar {
     }
   }
 
+  update(value: number) {
+    const previousPercentage = Math.floor((this.current / this.total) * 100);
+    this.current = value;
+    const percentage = Math.floor((this.current / this.total) * 100);
+
+    // Log if crossed a 20% threshold
+    if (percentage >= this.nextLogThreshold || percentage < previousPercentage) {
+      const msg = `⏳ Progress: ${percentage}% (${this.current}/${this.total})`;
+      if (this.logger) {
+        this.logger.info(msg);
+      } else {
+        console.log(msg);
+      }
+      this.nextLogThreshold = Math.floor(percentage / 20) * 20 + 20;
+    }
+  }
+
   stop() {
     // Optional: Log completion
   }

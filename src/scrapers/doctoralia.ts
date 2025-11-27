@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import puppeteer, { Browser } from 'puppeteer';
+import pLimit from 'p-limit';
 import { Env } from '../config/env.js';
 import { Logger } from '../utils/logger.js';
 import { ProgressUtils } from '../utils/progress.js';
@@ -40,35 +41,62 @@ export class DoctoraliaScraper {
 
     const cities = this.env.SCRAPING_CITIES.split(',').map((c) => c.trim());
     const specialties = this.env.SCRAPING_SPECIALTIES.split(',').map((s) => s.trim());
-    const results: ScrapedDoctor[] = [];
 
-    const totalTasks = cities.length * specialties.length;
+    // Create tasks for all city/specialty combinations
+    interface ScrapeTask {
+      city: string;
+      domain: string;
+      specialty: string;
+    }
+
+    const tasks: ScrapeTask[] = [];
+    for (const city of cities) {
+      const domain = this.getDomainForCity(city);
+      if (!domain) {
+        this.logger.warn(`⚠️ No domain mapping for city: ${city}, skipping.`);
+        continue;
+      }
+      for (const specialty of specialties) {
+        tasks.push({ city, domain, specialty });
+      }
+    }
+
+    const totalTasks = tasks.length;
     const bar = ProgressUtils.createBar(
       ProgressUtils.getStandardFormat('Scraping Progress'),
       this.logger,
     );
     bar.start(totalTasks, 0);
 
-    for (const city of cities) {
-      const domain = this.getDomainForCity(city);
-      if (!domain) {
-        this.logger.warn(`⚠️ No domain mapping for city: ${city}, skipping.`);
-        bar.increment(specialties.length); // Skip all specialties for this city
-        continue;
-      }
+    // Use p-limit to control concurrency
+    const limit = pLimit(this.env.SCRAPING_CONCURRENCY);
+    const results: ScrapedDoctor[] = [];
 
-      for (const specialty of specialties) {
+    // Execute tasks with controlled concurrency
+    const scrapePromises = tasks.map((task) =>
+      limit(async () => {
         try {
           const page = await this.browser!.newPage();
-          const doctors = await this.searchScraper!.scrapeSearchPage(page, domain, city, specialty);
-          results.push(...doctors);
+          const doctors = await this.searchScraper!.scrapeSearchPage(
+            page,
+            task.domain,
+            task.city,
+            task.specialty,
+          );
           await page.close();
+          bar.increment();
+          return doctors;
         } catch (error) {
-          this.logger.error(`❌ Error scraping ${city}/${specialty}:`, error);
+          this.logger.error(`❌ Error scraping ${task.city}/${task.specialty}:`, error);
+          bar.increment();
+          return [];
         }
-        bar.increment();
-      }
-    }
+      }),
+    );
+
+    const doctorArrays = await Promise.all(scrapePromises);
+    results.push(...doctorArrays.flat());
+
     bar.stop();
 
     // Save to JSON

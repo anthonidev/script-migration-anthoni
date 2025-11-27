@@ -43,27 +43,40 @@ export class DbService {
     this.logger.info('✅ Database seeding completed successfully.');
   }
 
-  private async seedDoctors(doctors: ScrapedDoctor[]) {
+  // Public method to allow parallel execution from main.ts
+  async seedDoctors(doctors: ScrapedDoctor[]) {
     this.logger.info(`Processing ${doctors.length} doctors...`);
-    const createdDoctors: DoctorWithTreatments[] = [];
+
+    // Batch check for existing doctors (1 query instead of N)
+    const existingDoctors = await this.prisma.doctor.findMany({
+      where: {
+        sourceProfileUrl: { in: doctors.map((d) => d.sourceProfileUrl) },
+      },
+      select: { sourceProfileUrl: true },
+    });
+
+    const existingUrls = new Set(existingDoctors.map((d) => d.sourceProfileUrl));
+    const newDoctors = doctors.filter((d) => !existingUrls.has(d.sourceProfileUrl));
+
+    if (newDoctors.length === 0) {
+      this.logger.info('⏭️ No new doctors to seed (all already exist).');
+      return [];
+    }
+
+    this.logger.info(`Found ${newDoctors.length} new doctors to seed...`);
 
     const bar = ProgressUtils.createBar(
       ProgressUtils.getStandardFormat('Seeding Doctors'),
       this.logger,
     );
-    bar.start(doctors.length, 0);
+    bar.start(newDoctors.length, 0);
 
-    for (const doc of doctors) {
-      // Avoid duplicates based on sourceProfileUrl
-      const exists = await this.prisma.doctor.findFirst({
-        where: { sourceProfileUrl: doc.sourceProfileUrl },
-      });
+    const createdDoctors: DoctorWithTreatments[] = [];
 
-      if (exists) {
-        bar.increment();
-        continue;
-      }
-
+    // Note: We can't use createMany for doctors because they have nested relations
+    // (treatments and availability). Prisma doesn't support nested createMany.
+    // However, we've already optimized the duplicate check to a single query.
+    for (const doc of newDoctors) {
       try {
         const createdDoc = await this.prisma.doctor.create({
           data: {
@@ -105,9 +118,9 @@ export class DbService {
     return createdDoctors;
   }
 
-  private async seedPatients(patients: GeneratedPatient[]) {
+  // Public method to allow flexible seeding from main.ts
+  async seedPatients(patients: GeneratedPatient[]) {
     this.logger.info(`Processing ${patients.length} patients...`);
-    const createdPatients: Patient[] = [];
 
     const bar = ProgressUtils.createBar(
       ProgressUtils.getStandardFormat('Seeding Patients'),
@@ -115,26 +128,32 @@ export class DbService {
     );
     bar.start(patients.length, 0);
 
-    for (const p of patients) {
-      try {
-        const createdPatient = await this.prisma.patient.create({
-          data: p,
-        });
-        createdPatients.push(createdPatient);
-      } catch (error) {
-        this.logger.error(`Failed to create patient ${p.fullName}`, error);
-      }
-      bar.increment();
+    try {
+      // Batch insert all patients in a single query
+      await this.prisma.patient.createMany({
+        data: patients,
+        skipDuplicates: true,
+      });
+
+      // Fetch all created patients to return them
+      const createdPatients = await this.prisma.patient.findMany({
+        orderBy: { createdAt: 'desc' },
+        take: patients.length,
+      });
+
+      bar.update(patients.length);
+      bar.stop();
+      this.logger.info(`✅ Seeded ${createdPatients.length} new patients.`);
+      return createdPatients;
+    } catch (error) {
+      bar.stop();
+      this.logger.error('Failed to create patients in batch', error);
+      return [];
     }
-    bar.stop();
-    this.logger.info(`✅ Seeded ${createdPatients.length} new patients.`);
-    return createdPatients;
   }
 
-  private async seedAppointments(
-    createdDoctors: DoctorWithTreatments[],
-    createdPatients: Patient[],
-  ) {
+  // Public method to allow flexible seeding from main.ts
+  async seedAppointments(createdDoctors: DoctorWithTreatments[], createdPatients: Patient[]) {
     this.logger.info('📅 Generating appointments...');
 
     let allDoctors = createdDoctors;
@@ -151,7 +170,6 @@ export class DbService {
       return;
     }
 
-    let appointmentCount = 0;
     const targetAppointments = this.env.APPOINTMENTS_COUNT;
 
     const bar = ProgressUtils.createBar(
@@ -160,7 +178,13 @@ export class DbService {
     );
     bar.start(targetAppointments, 0);
 
-    while (appointmentCount < targetAppointments) {
+    // Generate all appointments data first (in-memory)
+    const appointmentsData = [];
+    let attempts = 0;
+    const maxAttempts = targetAppointments * 2; // Prevent infinite loop
+
+    while (appointmentsData.length < targetAppointments && attempts < maxAttempts) {
+      attempts++;
       const doctor = faker.helpers.arrayElement(allDoctors);
       const patient = faker.helpers.arrayElement(createdPatients);
 
@@ -174,24 +198,29 @@ export class DbService {
       const startAt = faker.date.soon({ days: 30 });
       const endAt = new Date(startAt.getTime() + 30 * 60000);
 
-      try {
-        await this.prisma.appointment.create({
-          data: {
-            doctorId: doctor.id,
-            patientId: patient.id,
-            treatmentId: treatment.id,
-            startAt,
-            endAt,
-            status: AppointmentStatus.scheduled,
-          },
-        });
-        appointmentCount++;
-        bar.increment();
-      } catch (error) {
-        this.logger.error('Failed to create appointment', error);
-      }
+      appointmentsData.push({
+        doctorId: doctor.id,
+        patientId: patient.id,
+        treatmentId: treatment.id,
+        startAt,
+        endAt,
+        status: AppointmentStatus.scheduled,
+      });
     }
-    bar.stop();
-    this.logger.info(`✅ Generated ${appointmentCount} appointments.`);
+
+    try {
+      // Batch insert all appointments in a single query
+      await this.prisma.appointment.createMany({
+        data: appointmentsData,
+        skipDuplicates: true,
+      });
+
+      bar.update(appointmentsData.length);
+      bar.stop();
+      this.logger.info(`✅ Generated ${appointmentsData.length} appointments.`);
+    } catch (error) {
+      bar.stop();
+      this.logger.error('Failed to create appointments in batch', error);
+    }
   }
 }

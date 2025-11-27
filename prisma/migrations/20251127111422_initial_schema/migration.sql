@@ -50,6 +50,7 @@ CREATE TABLE "patients" (
     "document_number" VARCHAR(32),
     "phone_number" VARCHAR(32),
     "email" TEXT,
+    "created_at" TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "patients_pkey" PRIMARY KEY ("id")
 );
@@ -68,6 +69,15 @@ CREATE TABLE "appointments" (
 );
 
 -- CreateIndex
+CREATE INDEX "idx_doctors_city_specialty" ON "doctors"("city", "specialty");
+
+-- CreateIndex
+CREATE INDEX "idx_doctors_rating" ON "doctors"("rating");
+
+-- CreateIndex
+CREATE INDEX "idx_doctors_source_url" ON "doctors"("source_profile_url");
+
+-- CreateIndex
 CREATE UNIQUE INDEX "ux_treatments_doctor_name" ON "treatments"("doctor_id", "name");
 
 -- CreateIndex
@@ -75,6 +85,12 @@ CREATE INDEX "doctor_availability_doctor_id_idx" ON "doctor_availability"("docto
 
 -- CreateIndex
 CREATE INDEX "doctor_availability_start_at_idx" ON "doctor_availability"("start_at");
+
+-- CreateIndex
+CREATE INDEX "idx_patients_email" ON "patients"("email");
+
+-- CreateIndex
+CREATE INDEX "idx_patients_created_at" ON "patients"("created_at");
 
 -- CreateIndex
 CREATE INDEX "appointments_doctor_id_idx" ON "appointments"("doctor_id");

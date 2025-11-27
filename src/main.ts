@@ -48,21 +48,35 @@ async function main() {
     }
     logger.emptyLine();
 
-    // 2. Generate Data
-    logger.info('STEP 2: GENERATING DATA');
+    // 2. Connect to Database
+    logger.info('STEP 2: CONNECTING TO DATABASE');
     logger.separator();
-    logger.info('🎲 Starting Data Generator...');
-    const patients = await generator.generate();
-    logger.info(`✅ Generated ${patients.length} patients.`);
+    await db.connect();
     logger.emptyLine();
 
-    // 3. Seed Database
-    logger.info('STEP 3: SEEDING DATABASE');
+    // 3. Parallel Generation + Seeding
+    logger.info('STEP 3: PARALLEL DATA GENERATION & DOCTOR SEEDING');
     logger.separator();
-    logger.info('💾 Starting Database Seeder...');
-    await db.connect();
-    await db.seedDatabase(doctors, patients);
-    logger.info('✅ Database seeded successfully.');
+    logger.info('⚡ Running in parallel: Patient generation + Doctor seeding...');
+
+    const [createdDoctors, patients] = await Promise.all([
+      db.seedDoctors(doctors),
+      generator.generate(),
+    ]);
+
+    logger.info(`✅ Parallel execution completed.`);
+    logger.info(`   - Seeded ${createdDoctors.length} doctors`);
+    logger.info(`   - Generated ${patients.length} patients`);
+    logger.emptyLine();
+
+    // 4. Sequential Patient & Appointment Seeding
+    logger.info('STEP 4: SEEDING PATIENTS & APPOINTMENTS');
+    logger.separator();
+
+    const createdPatients = await db.seedPatients(patients);
+    await db.seedAppointments(createdDoctors, createdPatients);
+
+    logger.info('✅ Database seeding completed successfully.');
     logger.emptyLine();
   } catch (error) {
     logger.error('❌ Pipeline failed:', error);

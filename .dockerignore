@@ -1,7 +1,55 @@
+# Dependencies
 node_modules
+npm-debug.log*
+pnpm-debug.log*
+.pnpm-store
+
+# Build outputs
 dist
-.git
+build
+*.tsbuildinfo
+
+# Environment files
 .env
+.env.*
+!.env.example
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
 docker-compose.yml
-start.sh
+Dockerfile.backup
+.dockerignore
+
+# Documentation
 README.md
+TECHNICAL_DETAILS.md
+*.md
+docs/
+
+# Scripts
+start.sh
+start.ps1
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Testing
+coverage
+.nyc_output
+*.test.ts
+*.spec.ts
+
+# Misc
+.DS_Store
+Thumbs.db
+*.log
+.cache
+example/
