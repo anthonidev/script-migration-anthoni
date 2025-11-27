@@ -1,8 +1,12 @@
-FROM node:22-slim
+# ============================================
+# Stage 1: Base - Puppeteer Dependencies
+# ============================================
+FROM node:22-slim AS base
 
 ENV PUPPETEER_CACHE_DIR=/app/.cache
 
 # Install system dependencies for Puppeteer
+# EXACT list from the working single-stage Dockerfile
 RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
@@ -61,21 +65,44 @@ RUN apt-get update && apt-get install -y \
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
-# Install pnpm
+# ============================================
+# Stage 2: Dependencies - Install Node packages
+# ============================================
+FROM base AS dependencies
+
+# Install pnpm globally
 RUN npm install -g pnpm
 
 WORKDIR /app
 
-# Copy package files
+# Copy package files for dependency installation
 COPY package.json pnpm-lock.yaml ./
 
+# Configure pnpm to use hoisted linker
+# This creates a flat node_modules structure (like npm) without symlinks to a global store
+# ensuring it is safe to copy between stages
+RUN pnpm config set node-linker hoisted
+
 # Install dependencies
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
+
+# ============================================
+# Stage 3: Runtime - Final production image
+# ============================================
+FROM base AS runtime
+
+WORKDIR /app
+
+# Install pnpm globally
+RUN npm install -g pnpm
+
+# Copy node_modules from dependencies stage
+COPY --from=dependencies /app/node_modules ./node_modules
 
 # Copy source code
 COPY . .
 
-# Generate Prisma Client
+# Generate Prisma Client in runtime stage
 RUN pnpm prisma generate
 
 CMD ["pnpm", "start"]
