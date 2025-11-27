@@ -1,23 +1,63 @@
 import cliProgress from 'cli-progress';
 import chalk from 'chalk';
+import { Logger } from './logger.js';
 
 export class ProgressUtils {
-  static createBar(format: string) {
-    return new cliProgress.SingleBar(
-      {
-        format: format,
-        barCompleteChar: '\u2588',
-        barIncompleteChar: '\u2591',
-        hideCursor: true,
-        clearOnComplete: false,
-        stopOnComplete: true,
-        forceRedraw: true,
-      },
-      cliProgress.Presets.shades_classic,
-    );
+  static createBar(format: string, logger?: Logger) {
+    if (process.stdout.isTTY) {
+      return new cliProgress.SingleBar(
+        {
+          format: format,
+          barCompleteChar: '\u2588',
+          barIncompleteChar: '\u2591',
+          hideCursor: true,
+          clearOnComplete: false,
+          stopOnComplete: true,
+          forceRedraw: true,
+          stream: process.stdout,
+        },
+        cliProgress.Presets.shades_classic,
+      );
+    } else {
+      return new SimpleProgressBar(logger);
+    }
   }
 
   static getStandardFormat(taskName: string) {
     return `${chalk.cyan(' ' + taskName)} [${chalk.green('{bar}')}] {percentage}% | {value}/{total} items`;
+  }
+}
+
+class SimpleProgressBar {
+  private total = 0;
+  private current = 0;
+  private nextLogThreshold = 0;
+
+  constructor(private logger?: Logger) {}
+
+  start(total: number, startValue: number) {
+    this.total = total;
+    this.current = startValue;
+    this.nextLogThreshold = 0;
+  }
+
+  increment(amount = 1) {
+    this.current += amount;
+    const percentage = Math.floor((this.current / this.total) * 100);
+
+    // Log every 20% (approx) or when complete
+    if (percentage >= this.nextLogThreshold) {
+      const msg = `⏳ Progress: ${percentage}% (${this.current}/${this.total})`;
+      if (this.logger) {
+        this.logger.info(msg);
+      } else {
+        console.log(msg);
+      }
+      this.nextLogThreshold += 20;
+    }
+  }
+
+  stop() {
+    // Optional: Log completion
   }
 }

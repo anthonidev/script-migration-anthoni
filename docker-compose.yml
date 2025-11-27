@@ -27,6 +27,11 @@ services:
       PATIENTS_COUNT: ${PATIENTS_COUNT}
       APPOINTMENTS_COUNT: ${APPOINTMENTS_COUNT}
       FORCE_COLOR: '1'
+      PRISMA_HIDE_UPDATE_MESSAGE: 'true'
+      SKIP_SCRAPING: ${SKIP_SCRAPING}
+      MAX_SERVICES_COUNT: ${MAX_SERVICES_COUNT}
+      MAX_AVAILABILITY_SLOTS_COUNT: ${MAX_AVAILABILITY_SLOTS_COUNT}
+      MAX_DOCTORS_PER_SEARCH: ${MAX_DOCTORS_PER_SEARCH}
     command: sh -c "pnpm prisma migrate deploy && pnpm start"
     volumes:
       - ./data:/app/data

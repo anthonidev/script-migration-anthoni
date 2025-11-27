@@ -12,12 +12,15 @@ export class PatientGenerator {
     this.logger = new Logger(env.LOG_LEVEL);
   }
 
-  generate(): GeneratedPatient[] {
+  async generate(): Promise<GeneratedPatient[]> {
     const count = this.env.PATIENTS_COUNT;
     this.logger.info(`👥 Generating ${count} fake patients...`);
 
     const patients: GeneratedPatient[] = [];
-    const bar = ProgressUtils.createBar(ProgressUtils.getStandardFormat('Generating Patients'));
+    const bar = ProgressUtils.createBar(
+      ProgressUtils.getStandardFormat('Generating Patients'),
+      this.logger,
+    );
     bar.start(count, 0);
 
     for (let i = 0; i < count; i++) {
@@ -28,6 +31,11 @@ export class PatientGenerator {
         email: faker.internet.email(),
       });
       bar.increment();
+
+      // Yield to event loop every 20 items to allow logs to flush
+      if (i % 20 === 0) {
+        await new Promise((resolve) => setTimeout(resolve, 0));
+      }
     }
     bar.stop();
 

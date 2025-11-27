@@ -47,7 +47,10 @@ export class DbService {
     this.logger.info(`Processing ${doctors.length} doctors...`);
     const createdDoctors: DoctorWithTreatments[] = [];
 
-    const bar = ProgressUtils.createBar(ProgressUtils.getStandardFormat('Seeding Doctors'));
+    const bar = ProgressUtils.createBar(
+      ProgressUtils.getStandardFormat('Seeding Doctors'),
+      this.logger,
+    );
     bar.start(doctors.length, 0);
 
     for (const doc of doctors) {
@@ -106,7 +109,10 @@ export class DbService {
     this.logger.info(`Processing ${patients.length} patients...`);
     const createdPatients: Patient[] = [];
 
-    const bar = ProgressUtils.createBar(ProgressUtils.getStandardFormat('Seeding Patients'));
+    const bar = ProgressUtils.createBar(
+      ProgressUtils.getStandardFormat('Seeding Patients'),
+      this.logger,
+    );
     bar.start(patients.length, 0);
 
     for (const p of patients) {
@@ -148,7 +154,10 @@ export class DbService {
     let appointmentCount = 0;
     const targetAppointments = this.env.APPOINTMENTS_COUNT;
 
-    const bar = ProgressUtils.createBar(ProgressUtils.getStandardFormat('Generating Appointments'));
+    const bar = ProgressUtils.createBar(
+      ProgressUtils.getStandardFormat('Generating Appointments'),
+      this.logger,
+    );
     bar.start(targetAppointments, 0);
 
     while (appointmentCount < targetAppointments) {

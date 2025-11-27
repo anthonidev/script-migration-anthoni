@@ -10,6 +10,9 @@ const envSchema = z.object({
   SCRAPING_TIMEOUT_MS: z.coerce.number().min(1000).default(30000),
   SCRAPING_CITIES: z.string().default('Lima,Bogotá,Madrid'),
   SCRAPING_SPECIALTIES: z.string().default('Cardiólogo,Dermatólogo,Pediatra'),
+  MAX_SERVICES_COUNT: z.coerce.number().min(1).default(5),
+  MAX_AVAILABILITY_SLOTS_COUNT: z.coerce.number().min(1).default(5),
+  MAX_DOCTORS_PER_SEARCH: z.coerce.number().min(1).default(2),
 
   // Data Generation
   PATIENTS_COUNT: z.coerce.number().min(1).default(200),

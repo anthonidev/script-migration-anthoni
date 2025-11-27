@@ -11,18 +11,27 @@
     "sourceProfileUrl": "https://www.doctoralia.pe/juan-manuel-menendez-garcia/cardiologo/lima#address-id=30249&is-online-only=false&filters%5Bspecializations%5D%5B%5D=7",
     "treatments": [
       {
-        "name": "Consulta de Cardiólogo",
-        "price": 82,
+        "name": "Consulta de Revisión / Visitas sucesivas",
+        "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 158,
+        "name": "Consulta online",
+        "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Cardiólogo 3",
-        "price": 227,
+        "name": "Monitoreo Ambulatorio de la Presión Arterial (MAPA)",
+        "price": 300,
+        "currency": "PEN"
+      },
+      {
+        "name": "Levantamiento de observación en cardiología",
+        "price": 150,
+        "currency": "PEN"
+      },
+      {
+        "name": "Implante de marcapaso",
         "currency": "PEN"
       }
     ],
@@ -33,13 +42,23 @@
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-11-27T20:00:00.000Z",
+        "endAt": "2025-11-27T20:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
+        "startAt": "2025-11-28T12:00:00.000Z",
+        "endAt": "2025-11-28T12:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T20:00:00.000Z",
+        "endAt": "2025-11-28T20:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-01T08:00:00.000Z",
+        "endAt": "2025-12-01T08:30:00.000Z",
         "modality": "in_person"
       }
     ]
@@ -56,23 +75,27 @@
     "sourceProfileUrl": "https://www.doctoralia.pe/juan-manuel-menendez-garcia/cardiologo/lima#address-id=30249&is-online-only=false&filters%5Bspecializations%5D%5B%5D=7",
     "treatments": [
       {
-        "name": "Consulta de Cardiólogo",
-        "price": 145,
+        "name": "Consulta de Revisión / Visitas sucesivas",
+        "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 247,
+        "name": "Consulta online",
+        "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Cardiólogo 3",
-        "price": 125,
+        "name": "Monitoreo Ambulatorio de la Presión Arterial (MAPA)",
+        "price": 300,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Cardiólogo 4",
-        "price": 71,
+        "name": "Levantamiento de observación en cardiología",
+        "price": 150,
+        "currency": "PEN"
+      },
+      {
+        "name": "Implante de marcapaso",
         "currency": "PEN"
       }
     ],
@@ -83,8 +106,197 @@
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-11-27T20:00:00.000Z",
+        "endAt": "2025-11-27T20:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T12:00:00.000Z",
+        "endAt": "2025-11-28T12:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T20:00:00.000Z",
+        "endAt": "2025-11-28T20:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-01T08:00:00.000Z",
+        "endAt": "2025-12-01T08:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dra. Rosario Jaime",
+    "specialty": "Dermatólogo",
+    "city": "Lima",
+    "address": "Lima",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 296,
+    "sourceProfileUrl": "https://www.doctoralia.pe/rosario-jaime/dermatologo/san-juan-de-lurigancho#address-id=35532&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
+    "treatments": [
+      {
+        "name": "Consulta dermatológica",
+        "price": 70,
+        "currency": "PEN"
+      },
+      {
+        "name": "Primera visita Dermatología",
+        "price": 70,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Vitiligo con Láser Exclilite",
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Melasma",
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de estrías",
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T10:00:00.000Z",
+        "endAt": "2025-11-27T10:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-27T19:45:00.000Z",
+        "endAt": "2025-11-27T20:15:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T15:30:00.000Z",
+        "endAt": "2025-11-28T16:00:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T20:00:00.000Z",
+        "endAt": "2025-11-28T20:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T14:30:00.000Z",
+        "endAt": "2025-11-29T15:00:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dra. Rosario Jaime",
+    "specialty": "Dermatólogo",
+    "city": "Lima",
+    "address": "Lima",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 296,
+    "sourceProfileUrl": "https://www.doctoralia.pe/rosario-jaime/dermatologo/san-juan-de-lurigancho#address-id=35532&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
+    "treatments": [
+      {
+        "name": "Consulta dermatológica",
+        "price": 70,
+        "currency": "PEN"
+      },
+      {
+        "name": "Primera visita Dermatología",
+        "price": 70,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Vitiligo con Láser Exclilite",
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de Melasma",
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de estrías",
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T10:00:00.000Z",
+        "endAt": "2025-11-27T10:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-27T19:45:00.000Z",
+        "endAt": "2025-11-27T20:15:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T15:30:00.000Z",
+        "endAt": "2025-11-28T16:00:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T20:00:00.000Z",
+        "endAt": "2025-11-28T20:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T14:30:00.000Z",
+        "endAt": "2025-11-29T15:00:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dr. Marco Antonio Callo Corazao",
+    "specialty": "Pediatra",
+    "city": "Lima",
+    "address": "Lima",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 653,
+    "sourceProfileUrl": "https://www.doctoralia.pe/marco-antonio-callo-corazao/pediatra/los-olivos#address-id=34454&is-online-only=false&filters%5Bspecializations%5D%5B%5D=56",
+    "treatments": [
+      {
+        "name": "Visita Pediatría",
+        "price": 100,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta online",
+        "price": 70,
+        "currency": "PEN"
+      },
+      {
+        "name": "Inmunizaciones (vacunas)",
+        "price": 80,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T09:00:00.000Z",
+        "endAt": "2025-11-27T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-27T18:00:00.000Z",
+        "endAt": "2025-11-27T18:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T15:00:00.000Z",
+        "endAt": "2025-11-28T15:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T18:40:00.000Z",
+        "endAt": "2025-11-28T19:10:00.000Z",
         "modality": "in_person"
       },
       {
@@ -95,986 +307,696 @@
     ]
   },
   {
-    "fullName": "Dr. Juan Manuel Menéndez García",
-    "specialty": "Cardiólogo",
+    "fullName": "Dr. Marco Antonio Callo Corazao",
+    "specialty": "Pediatra",
     "city": "Lima",
     "address": "Lima",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 296,
-    "sourceProfileUrl": "https://www.doctoralia.pe/juan-manuel-menendez-garcia/cardiologo/lima#profile-reviews",
+    "reviewCount": 653,
+    "sourceProfileUrl": "https://www.doctoralia.pe/marco-antonio-callo-corazao/pediatra/los-olivos#address-id=34454&is-online-only=false&filters%5Bspecializations%5D%5B%5D=56",
     "treatments": [
       {
-        "name": "Consulta de Cardiólogo",
+        "name": "Visita Pediatría",
+        "price": 100,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta online",
+        "price": 70,
+        "currency": "PEN"
+      },
+      {
+        "name": "Inmunizaciones (vacunas)",
+        "price": 80,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T09:00:00.000Z",
+        "endAt": "2025-11-27T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-27T18:00:00.000Z",
+        "endAt": "2025-11-27T18:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T15:00:00.000Z",
+        "endAt": "2025-11-28T15:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T18:40:00.000Z",
+        "endAt": "2025-11-28T19:10:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T09:00:00.000Z",
+        "endAt": "2025-11-29T09:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dr. Julián Lugo Peña",
+    "specialty": "Cardiólogo",
+    "city": "Bogotá",
+    "address": "Bogotá",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 180,
+    "sourceProfileUrl": "https://www.doctoralia.co/julian-lugo-pena/cardiologo-internista/bogota#address-id=79097&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
+    "treatments": [
+      {
+        "name": "Visita Cardiología",
+        "price": 200,
+        "currency": "PEN"
+      },
+      {
+        "name": "Anticoagulación",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta clínica de Chagas",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento colesterol alto",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta en línea",
+        "price": 160,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-28T08:30:00.000Z",
+        "endAt": "2025-11-28T09:00:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T09:00:00.000Z",
+        "endAt": "2025-11-28T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-04T12:30:00.000Z",
+        "endAt": "2025-12-04T13:00:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-04T18:00:00.000Z",
+        "endAt": "2025-12-04T18:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T08:30:00.000Z",
+        "endAt": "2025-11-28T09:00:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dr. Julián Lugo Peña",
+    "specialty": "Cardiólogo",
+    "city": "Bogotá",
+    "address": "Bogotá",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 180,
+    "sourceProfileUrl": "https://www.doctoralia.co/julian-lugo-pena/cardiologo-internista/bogota#address-id=79097&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
+    "treatments": [
+      {
+        "name": "Visita Cardiología",
+        "price": 200,
+        "currency": "PEN"
+      },
+      {
+        "name": "Anticoagulación",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta clínica de Chagas",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento colesterol alto",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta en línea",
+        "price": 160,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-28T08:30:00.000Z",
+        "endAt": "2025-11-28T09:00:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T09:00:00.000Z",
+        "endAt": "2025-11-28T09:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-04T12:30:00.000Z",
+        "endAt": "2025-12-04T13:00:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-04T18:00:00.000Z",
+        "endAt": "2025-12-04T18:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T08:30:00.000Z",
+        "endAt": "2025-11-28T09:00:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dra. Alejandra Téllez",
+    "specialty": "Dermatólogo",
+    "city": "Bogotá",
+    "address": "Bogotá",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 451,
+    "sourceProfileUrl": "https://www.doctoralia.co/alejandra-tellez/dermatologo/bogota#address-id=72596&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
+    "treatments": [
+      {
+        "name": "Visita Dermatología",
+        "price": 220,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta Dermatología",
+        "price": 220,
+        "currency": "PEN"
+      },
+      {
+        "name": "Ácido hialuronico labios , mentón, pómulos y ojeras",
+        "price": 1.1,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamientos con láser CO2",
+        "price": 1.1,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de ojeras",
+        "price": 1.06,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-12-02T10:50:00.000Z",
+        "endAt": "2025-12-02T11:20:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-05T09:50:00.000Z",
+        "endAt": "2025-12-05T10:20:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-11T08:00:00.000Z",
+        "endAt": "2025-12-11T08:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-11T10:00:00.000Z",
+        "endAt": "2025-12-11T10:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-12T08:00:00.000Z",
+        "endAt": "2025-12-12T08:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dra. Alejandra Téllez",
+    "specialty": "Dermatólogo",
+    "city": "Bogotá",
+    "address": "Bogotá",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 451,
+    "sourceProfileUrl": "https://www.doctoralia.co/alejandra-tellez/dermatologo/bogota#address-id=72596&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
+    "treatments": [
+      {
+        "name": "Visita Dermatología",
+        "price": 220,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta Dermatología",
+        "price": 220,
+        "currency": "PEN"
+      },
+      {
+        "name": "Ácido hialuronico labios , mentón, pómulos y ojeras",
+        "price": 1.1,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamientos con láser CO2",
+        "price": 1.1,
+        "currency": "PEN"
+      },
+      {
+        "name": "Tratamiento de ojeras",
+        "price": 1.06,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-12-02T10:50:00.000Z",
+        "endAt": "2025-12-02T11:20:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-05T09:50:00.000Z",
+        "endAt": "2025-12-05T10:20:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-11T08:00:00.000Z",
+        "endAt": "2025-12-11T08:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-11T10:00:00.000Z",
+        "endAt": "2025-12-11T10:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-12T08:00:00.000Z",
+        "endAt": "2025-12-12T08:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dra. Clara Marcela Peña",
+    "specialty": "Pediatra",
+    "city": "Bogotá",
+    "address": "Bogotá",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 31,
+    "sourceProfileUrl": "https://www.doctoralia.co/clara-marcela-pena/pediatra/bogota#address-id=110369&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
+    "treatments": [
+      {
+        "name": "Visita Pediatría",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Asesoría en puericultura",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Asesoría Online Pediatría",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Asesoría pediátrica por Videollamada",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta en línea",
+        "price": 250,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T08:00:00.000Z",
+        "endAt": "2025-11-27T08:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-27T20:45:00.000Z",
+        "endAt": "2025-11-27T21:15:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T08:00:00.000Z",
+        "endAt": "2025-11-28T08:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T20:45:00.000Z",
+        "endAt": "2025-11-28T21:15:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T08:00:00.000Z",
+        "endAt": "2025-11-29T08:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dra. Clara Marcela Peña",
+    "specialty": "Pediatra",
+    "city": "Bogotá",
+    "address": "Bogotá",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 31,
+    "sourceProfileUrl": "https://www.doctoralia.co/clara-marcela-pena/pediatra/bogota#address-id=110369&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
+    "treatments": [
+      {
+        "name": "Visita Pediatría",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Asesoría en puericultura",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Asesoría Online Pediatría",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Asesoría pediátrica por Videollamada",
+        "price": 250,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta en línea",
+        "price": 250,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T08:00:00.000Z",
+        "endAt": "2025-11-27T08:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-27T20:45:00.000Z",
+        "endAt": "2025-11-27T21:15:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T08:00:00.000Z",
+        "endAt": "2025-11-28T08:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-28T20:45:00.000Z",
+        "endAt": "2025-11-28T21:15:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T08:00:00.000Z",
+        "endAt": "2025-11-29T08:30:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dr. José Alberto de Agustín Loeches",
+    "specialty": "Cardiólogo",
+    "city": "Madrid",
+    "address": "Madrid",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 615,
+    "sourceProfileUrl": "https://www.doctoralia.es/jose-alberto-de-agustin-loeches/cardiologo/madrid#address-id=105078&is-online-only=false&filters%5Bspecializations%5D%5B%5D=10",
+    "treatments": [
+      {
+        "name": "Consulta online",
+        "price": 150,
+        "currency": "PEN"
+      },
+      {
+        "name": "Visita Cardiología",
+        "price": 150,
+        "currency": "PEN"
+      },
+      {
+        "name": "ECG Holter",
+        "price": 150,
+        "currency": "PEN"
+      },
+      {
+        "name": "Ecocardiograma + doppler color",
+        "price": 100,
+        "currency": "PEN"
+      },
+      {
+        "name": "Electrocardiograma",
+        "price": 50,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T19:30:00.000Z",
+        "endAt": "2025-11-27T20:00:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-27T20:10:00.000Z",
+        "endAt": "2025-11-27T20:40:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-01T17:50:00.000Z",
+        "endAt": "2025-12-01T18:20:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-01T19:10:00.000Z",
+        "endAt": "2025-12-01T19:40:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-02T17:10:00.000Z",
+        "endAt": "2025-12-02T17:40:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dr. José Alberto de Agustín Loeches",
+    "specialty": "Cardiólogo",
+    "city": "Madrid",
+    "address": "Madrid",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 615,
+    "sourceProfileUrl": "https://www.doctoralia.es/jose-alberto-de-agustin-loeches/cardiologo/madrid#address-id=105078&is-online-only=false&filters%5Bspecializations%5D%5B%5D=10",
+    "treatments": [
+      {
+        "name": "Consulta online",
+        "price": 150,
+        "currency": "PEN"
+      },
+      {
+        "name": "Visita Cardiología",
+        "price": 150,
+        "currency": "PEN"
+      },
+      {
+        "name": "ECG Holter",
+        "price": 150,
+        "currency": "PEN"
+      },
+      {
+        "name": "Ecocardiograma + doppler color",
+        "price": 100,
+        "currency": "PEN"
+      },
+      {
+        "name": "Electrocardiograma",
+        "price": 50,
+        "currency": "PEN"
+      }
+    ],
+    "availability": [
+      {
+        "startAt": "2025-11-27T19:30:00.000Z",
+        "endAt": "2025-11-27T20:00:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-27T20:10:00.000Z",
+        "endAt": "2025-11-27T20:40:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-01T17:50:00.000Z",
+        "endAt": "2025-12-01T18:20:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-01T19:10:00.000Z",
+        "endAt": "2025-12-01T19:40:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-02T17:10:00.000Z",
+        "endAt": "2025-12-02T17:40:00.000Z",
+        "modality": "in_person"
+      }
+    ]
+  },
+  {
+    "fullName": "Dr. Ricardo Moreno Alonso de Celada",
+    "specialty": "Dermatólogo",
+    "city": "Madrid",
+    "address": "Madrid",
+    "phoneCountryCode": "+51",
+    "phoneNumber": "999888777",
+    "rating": 5,
+    "reviewCount": 406,
+    "sourceProfileUrl": "https://www.doctoralia.es/ricardo-moreno-alonso-de-celada/dermatologo-dermatologo-infantil/madrid#address-id=265939&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
+    "treatments": [
+      {
+        "name": "Consulta online",
         "price": 140,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 51,
+        "name": "Visita Dermatología",
+        "price": 140,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta dermatológica",
+        "price": 140,
+        "currency": "PEN"
+      },
+      {
+        "name": "Visita de revisión",
+        "price": 140,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
+        "startAt": "2025-11-27T17:20:00.000Z",
+        "endAt": "2025-11-27T17:50:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-11-27T19:40:00.000Z",
+        "endAt": "2025-11-27T20:10:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Rosario Jaime",
-    "specialty": "Dermatólogo",
-    "city": "Lima",
-    "address": "Lima",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 296,
-    "sourceProfileUrl": "https://www.doctoralia.pe/rosario-jaime/dermatologo/san-juan-de-lurigancho#address-id=31360&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
-    "treatments": [
-      {
-        "name": "Consulta de Dermatólogo",
-        "price": 180,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 66,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 81,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 4",
-        "price": 67,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
+        "startAt": "2025-11-28T11:00:00.000Z",
+        "endAt": "2025-11-28T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-11-28T14:00:00.000Z",
+        "endAt": "2025-11-28T14:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
+        "startAt": "2025-12-01T10:40:00.000Z",
+        "endAt": "2025-12-01T11:10:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dra. Rosario Jaime",
-    "specialty": "Dermatólogo",
-    "city": "Lima",
-    "address": "Lima",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 296,
-    "sourceProfileUrl": "https://www.doctoralia.pe/rosario-jaime/dermatologo/san-juan-de-lurigancho#address-id=31360&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
-    "treatments": [
-      {
-        "name": "Consulta de Dermatólogo",
-        "price": 212,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 97,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 106,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Rosario Jaime",
-    "specialty": "Dermatólogo",
-    "city": "Lima",
-    "address": "Lima",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 296,
-    "sourceProfileUrl": "https://www.doctoralia.pe/rosario-jaime/dermatologo/san-juan-de-lurigancho#profile-reviews",
-    "treatments": [
-      {
-        "name": "Consulta de Dermatólogo",
-        "price": 158,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 134,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 65,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dr. Marco Antonio Callo Corazao",
-    "specialty": "Pediatra",
-    "city": "Lima",
-    "address": "Lima",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 653,
-    "sourceProfileUrl": "https://www.doctoralia.pe/marco-antonio-callo-corazao/pediatra/los-olivos#address-id=34454&is-online-only=false&filters%5Bspecializations%5D%5B%5D=56",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 93,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 232,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 3",
-        "price": 151,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 4",
-        "price": 222,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dr. Marco Antonio Callo Corazao",
-    "specialty": "Pediatra",
-    "city": "Lima",
-    "address": "Lima",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 653,
-    "sourceProfileUrl": "https://www.doctoralia.pe/marco-antonio-callo-corazao/pediatra/los-olivos#address-id=34454&is-online-only=false&filters%5Bspecializations%5D%5B%5D=56",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 186,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 53,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dr. Marco Antonio Callo Corazao",
-    "specialty": "Pediatra",
-    "city": "Lima",
-    "address": "Lima",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 653,
-    "sourceProfileUrl": "https://www.doctoralia.pe/marco-antonio-callo-corazao/pediatra/los-olivos#profile-reviews",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 130,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 209,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 3",
-        "price": 85,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
-    "specialty": "Cardiólogo",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 422,
-    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#address-id=72116&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
-    "treatments": [
-      {
-        "name": "Consulta de Cardiólogo",
-        "price": 138,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 199,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 3",
-        "price": 195,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
-    "specialty": "Cardiólogo",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 422,
-    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#address-id=72116&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
-    "treatments": [
-      {
-        "name": "Consulta de Cardiólogo",
-        "price": 179,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 112,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
-    "specialty": "Cardiólogo",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 422,
-    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#profile-reviews",
-    "treatments": [
-      {
-        "name": "Consulta de Cardiólogo",
-        "price": 170,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 249,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 3",
-        "price": 129,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Danney Gomez Angulo",
-    "specialty": "Dermatólogo",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 317,
-    "sourceProfileUrl": "https://www.doctoralia.co/danney-gomez-angulo/dermatologo/bogota#address-id=81365&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
-    "treatments": [
-      {
-        "name": "Consulta de Dermatólogo",
-        "price": 145,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 84,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 59,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 4",
-        "price": 182,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Danney Gomez Angulo",
-    "specialty": "Dermatólogo",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 317,
-    "sourceProfileUrl": "https://www.doctoralia.co/danney-gomez-angulo/dermatologo/bogota#address-id=81365&is-online-only=false&filters%5Bspecializations%5D%5B%5D=13",
-    "treatments": [
-      {
-        "name": "Consulta de Dermatólogo",
-        "price": 110,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 71,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 139,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 4",
-        "price": 126,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Danney Gomez Angulo",
-    "specialty": "Dermatólogo",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 317,
-    "sourceProfileUrl": "https://www.doctoralia.co/danney-gomez-angulo/dermatologo/bogota#profile-reviews",
-    "treatments": [
-      {
-        "name": "Consulta de Dermatólogo",
-        "price": 144,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 65,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 54,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Myriam Liliana Camargo Miranda",
-    "specialty": "Pediatra",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 483,
-    "sourceProfileUrl": "https://www.doctoralia.co/myriam-liliana-camargo-miranda/pediatra-terapeuta-complementario/bogota#address-id=54572&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 122,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 66,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 3",
-        "price": 119,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 4",
-        "price": 145,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Myriam Liliana Camargo Miranda",
-    "specialty": "Pediatra",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 483,
-    "sourceProfileUrl": "https://www.doctoralia.co/myriam-liliana-camargo-miranda/pediatra-terapeuta-complementario/bogota#address-id=54572&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 142,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 95,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Myriam Liliana Camargo Miranda",
-    "specialty": "Pediatra",
-    "city": "Bogotá",
-    "address": "Bogotá",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 483,
-    "sourceProfileUrl": "https://www.doctoralia.co/myriam-liliana-camargo-miranda/pediatra-terapeuta-complementario/bogota#profile-reviews",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 59,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 105,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dr. José Alberto de Agustín Loeches",
-    "specialty": "Cardiólogo",
-    "city": "Madrid",
-    "address": "Madrid",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 614,
-    "sourceProfileUrl": "https://www.doctoralia.es/jose-alberto-de-agustin-loeches/cardiologo/madrid#address-id=105078&is-online-only=false&filters%5Bspecializations%5D%5B%5D=10",
-    "treatments": [
-      {
-        "name": "Consulta de Cardiólogo",
-        "price": 73,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 158,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 3",
-        "price": 130,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dr. José Alberto de Agustín Loeches",
-    "specialty": "Cardiólogo",
-    "city": "Madrid",
-    "address": "Madrid",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 614,
-    "sourceProfileUrl": "https://www.doctoralia.es/jose-alberto-de-agustin-loeches/cardiologo/madrid#address-id=105078&is-online-only=false&filters%5Bspecializations%5D%5B%5D=10",
-    "treatments": [
-      {
-        "name": "Consulta de Cardiólogo",
-        "price": 203,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 89,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dr. José Alberto de Agustín Loeches",
-    "specialty": "Cardiólogo",
-    "city": "Madrid",
-    "address": "Madrid",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 614,
-    "sourceProfileUrl": "https://www.doctoralia.es/jose-alberto-de-agustin-loeches/cardiologo/madrid#profile-reviews",
-    "treatments": [
-      {
-        "name": "Consulta de Cardiólogo",
-        "price": 109,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 2",
-        "price": 180,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Cardiólogo 3",
-        "price": 64,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Ángela Hernández Martín",
+    "fullName": "Dr. Ricardo Moreno Alonso de Celada",
     "specialty": "Dermatólogo",
     "city": "Madrid",
     "address": "Madrid",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 288,
-    "sourceProfileUrl": "https://www.doctoralia.es/angela-hernandez-martin/dermatologo-dermatologo-infantil/madrid#address-id=214621&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
+    "reviewCount": 406,
+    "sourceProfileUrl": "https://www.doctoralia.es/ricardo-moreno-alonso-de-celada/dermatologo-dermatologo-infantil/madrid#address-id=265939&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
     "treatments": [
       {
-        "name": "Consulta de Dermatólogo",
-        "price": 236,
+        "name": "Consulta online",
+        "price": 140,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 118,
+        "name": "Visita Dermatología",
+        "price": 140,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 240,
+        "name": "Consulta dermatológica",
+        "price": 140,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Dermatólogo 4",
-        "price": 198,
+        "name": "Visita de revisión",
+        "price": 140,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
+        "startAt": "2025-11-27T17:20:00.000Z",
+        "endAt": "2025-11-27T17:50:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-11-27T19:40:00.000Z",
+        "endAt": "2025-11-27T20:10:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Ángela Hernández Martín",
-    "specialty": "Dermatólogo",
-    "city": "Madrid",
-    "address": "Madrid",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 288,
-    "sourceProfileUrl": "https://www.doctoralia.es/angela-hernandez-martin/dermatologo-dermatologo-infantil/madrid#address-id=214621&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
-    "treatments": [
-      {
-        "name": "Consulta de Dermatólogo",
-        "price": 53,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 173,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
+        "startAt": "2025-11-28T11:00:00.000Z",
+        "endAt": "2025-11-28T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-11-28T14:00:00.000Z",
+        "endAt": "2025-11-28T14:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Ángela Hernández Martín",
-    "specialty": "Dermatólogo",
-    "city": "Madrid",
-    "address": "Madrid",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 288,
-    "sourceProfileUrl": "https://www.doctoralia.es/angela-hernandez-martin/dermatologo-dermatologo-infantil/madrid#profile-reviews",
-    "treatments": [
-      {
-        "name": "Consulta de Dermatólogo",
-        "price": 228,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 2",
-        "price": 234,
-        "currency": "PEN"
-      },
-      {
-        "name": "Tratamiento de Dermatólogo 3",
-        "price": 153,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
+        "startAt": "2025-12-01T10:40:00.000Z",
+        "endAt": "2025-12-01T11:10:00.000Z",
         "modality": "in_person"
       }
     ]
@@ -1091,30 +1013,55 @@
     "sourceProfileUrl": "https://www.doctoralia.es/edurne-ruiz-lazcoz/pediatra/madrid#address-id=312283&is-online-only=false&filters%5Bspecializations%5D%5B%5D=58",
     "treatments": [
       {
-        "name": "Consulta de Pediatra",
-        "price": 76,
+        "name": "Consulta breve",
+        "price": 20,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 211,
+        "name": "Consulta pediátrica online",
+        "price": 25,
+        "currency": "PEN"
+      },
+      {
+        "name": "Seguimiento online",
+        "price": 40,
+        "currency": "PEN"
+      },
+      {
+        "name": "Urgencias pediátricas",
+        "price": 40,
+        "currency": "PEN"
+      },
+      {
+        "name": "Visita de revisión",
+        "price": 25,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
+        "startAt": "2025-11-28T16:00:00.000Z",
+        "endAt": "2025-11-28T16:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-11-28T21:45:00.000Z",
+        "endAt": "2025-11-28T22:15:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
+        "startAt": "2025-11-29T08:00:00.000Z",
+        "endAt": "2025-11-29T08:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T12:45:00.000Z",
+        "endAt": "2025-11-29T13:15:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-01T16:00:00.000Z",
+        "endAt": "2025-12-01T16:30:00.000Z",
         "modality": "in_person"
       }
     ]
@@ -1131,70 +1078,55 @@
     "sourceProfileUrl": "https://www.doctoralia.es/edurne-ruiz-lazcoz/pediatra/madrid#address-id=312283&is-online-only=false&filters%5Bspecializations%5D%5B%5D=58",
     "treatments": [
       {
-        "name": "Consulta de Pediatra",
-        "price": 183,
+        "name": "Consulta breve",
+        "price": 20,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 176,
-        "currency": "PEN"
-      }
-    ],
-    "availability": [
-      {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
-        "modality": "in_person"
-      },
-      {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
-        "modality": "in_person"
-      }
-    ]
-  },
-  {
-    "fullName": "Dra. Edurne Ruiz Lázcoz",
-    "specialty": "Pediatra",
-    "city": "Madrid",
-    "address": "Madrid",
-    "phoneCountryCode": "+51",
-    "phoneNumber": "999888777",
-    "rating": 5,
-    "reviewCount": 9,
-    "sourceProfileUrl": "https://www.doctoralia.es/edurne-ruiz-lazcoz/pediatra/madrid#profile-reviews",
-    "treatments": [
-      {
-        "name": "Consulta de Pediatra",
-        "price": 224,
+        "name": "Consulta pediátrica online",
+        "price": 25,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento de Pediatra 2",
-        "price": 152,
+        "name": "Seguimiento online",
+        "price": 40,
+        "currency": "PEN"
+      },
+      {
+        "name": "Urgencias pediátricas",
+        "price": 40,
+        "currency": "PEN"
+      },
+      {
+        "name": "Visita de revisión",
+        "price": 25,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
+        "startAt": "2025-11-28T16:00:00.000Z",
+        "endAt": "2025-11-28T16:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-11-28T21:45:00.000Z",
+        "endAt": "2025-11-28T22:15:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T09:00:00.000Z",
-        "endAt": "2025-11-29T09:30:00.000Z",
+        "startAt": "2025-11-29T08:00:00.000Z",
+        "endAt": "2025-11-29T08:30:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-11-29T12:45:00.000Z",
+        "endAt": "2025-11-29T13:15:00.000Z",
+        "modality": "in_person"
+      },
+      {
+        "startAt": "2025-12-01T16:00:00.000Z",
+        "endAt": "2025-12-01T16:30:00.000Z",
         "modality": "in_person"
       }
     ]

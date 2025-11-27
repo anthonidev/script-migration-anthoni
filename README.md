@@ -11,18 +11,56 @@ Este proyecto automatiza la extracción de datos de doctores de Doctoralia, gene
 
 ### Opción 1: Script Automático (Recomendado)
 
-La forma más sencilla de ejecutar el proyecto es utilizando el script `start.sh`. Este script levanta el entorno, espera a que termine la migración y abre la herramienta de visualización automáticamente.
+La forma más sencilla de ejecutar el proyecto es utilizando los scripts automáticos. Estos levantan el entorno, esperan a que termine la migración y abren la herramienta de visualización.
 
-Ejecuta el siguiente comando en la raíz del proyecto:
+**Para Windows (PowerShell):**
 
-```bash
-./start.sh
-```
+1. Abre PowerShell en la carpeta del proyecto.
+2. Ejecuta:
 
-**¿Qué hace este script?**
+   ```powershell
+   ./start.ps1
+   ```
 
-1. Levanta los contenedores de Docker (Base de datos, Aplicación, Prisma Studio).
-2. Abre **Prisma Studio** en tu navegador predeterminado.
+   _Nota: Si tienes problemas de permisos, ejecuta primero `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`._
+
+   **Opcional: Omitir Scraping**
+   Si ya tienes datos descargados y quieres evitar saturar la página de Doctoralia, usa:
+
+   ```powershell
+   ./start.ps1 -SkipScraping
+   ```
+
+**Para Linux / Mac:**
+
+1. Dale permisos de ejecución al script:
+   ```bash
+   chmod +x start.sh
+   ```
+2. Ejecuta:
+
+   ```bash
+   ./start.sh
+   ```
+
+   **Opcional: Omitir Scraping**
+   Para usar datos cacheados y evitar peticiones innecesarias:
+
+   ```bash
+   ./start.sh --skip-scraping
+   ```
+
+   > [!TIP]
+   > **Tiempos de Ejecución Estimados:**
+   >
+   > - **Con Scraping:** ~5-7 minutos (dependiendo de la red y configuración).
+   > - **Sin Scraping (Skip):** ~0.15 segundos (carga instantánea de datos cacheados).
+
+**¿Qué hacen estos scripts?**
+
+1. Levantan los contenedores de Docker (Base de datos, Aplicación, Prisma Studio).
+2. Esperan a que termine el proceso de scraping (o carga de datos) y generación de datos.
+3. Abren **Prisma Studio** en tu navegador predeterminado.
 
 ### Opción 2: Docker Compose Manual
 
@@ -47,20 +85,21 @@ Si prefieres ejecutar los comandos de Docker directamente:
 
 El comportamiento del sistema se puede ajustar en el archivo `.env` (o modificando `docker-compose.yml`):
 
-| Variable               | Descripción                                     | Valor por defecto                 |
-| ---------------------- | ----------------------------------------------- | --------------------------------- |
-| `SCRAPING_CITIES`      | Lista de ciudades a buscar (separadas por coma) | `Lima,Bogotá,Madrid`              |
-| `SCRAPING_SPECIALTIES` | Lista de especialidades a buscar                | `Cardiólogo,Dermatólogo,Pediatra` |
-| `PATIENTS_COUNT`       | Cantidad de pacientes falsos a generar          | `200`                             |
-| `APPOINTMENTS_COUNT`   | Cantidad de citas a generar                     | `1000`                            |
-
-## 🛠️ Tecnologías Utilizadas
-
-- **Puppeteer**: Para el web scraping de perfiles de doctores en Doctoralia.
-- **Faker.js**: Para generar datos realistas de pacientes y citas.
-- **Prisma ORM**: Para la gestión del esquema de base de datos y migraciones.
 - **PostgreSQL**: Motor de base de datos (versión 16).
 - **Docker**: Para orquestar todos los servicios en un entorno aislado.
+
+| Variable                       | Descripción                                     | Valor por defecto                 |
+| ------------------------------ | ----------------------------------------------- | --------------------------------- |
+| `SCRAPING_CITIES`              | Lista de ciudades a buscar (separadas por coma) | `Lima,Bogotá,Madrid`              |
+| `SCRAPING_SPECIALTIES`         | Lista de especialidades a buscar                | `Cardiólogo,Dermatólogo,Pediatra` |
+| `PATIENTS_COUNT`               | Cantidad de pacientes falsos a generar          | `200`                             |
+| `APPOINTMENTS_COUNT`           | Cantidad de citas a generar                     | `1000`                            |
+| `MAX_SERVICES_COUNT`           | Máximo de servicios a extraer por doctor        | `5`                               |
+| `MAX_AVAILABILITY_SLOTS_COUNT` | Máximo de horarios a extraer por doctor         | `5`                               |
+| `MAX_DOCTORS_PER_SEARCH`       | Máximo de doctores a extraer por búsqueda       | `2`                               |
+
+> [!NOTE]
+> Estas configuraciones permiten un **uso controlado** de los recursos y evitan saturar la página de Doctoralia. Se recomienda mantener valores bajos durante el desarrollo y pruebas para ser conscientes con el servidor destino.
 
 ## 📂 Estructura del Proyecto
 
