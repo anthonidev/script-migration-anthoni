@@ -1,7 +1,7 @@
 import { Browser, Page } from 'puppeteer';
 import { Env } from '../../config/env.js';
 import { Logger } from '../../utils/logger.js';
-import { ScrapedDoctor } from '../../types/index.js';
+import { ScrapedDoctor, Treatment, Availability } from '../../types/index.js';
 
 export class ProfileScraper {
   private logger: Logger;
@@ -49,7 +49,7 @@ export class ProfileScraper {
         .catch(() => 0);
 
       // Treatments
-      let treatments: Array<{ name: string; price?: number; currency: string }> = [];
+      let treatments: Treatment[] = [];
       try {
         treatments = await page.$$eval('[data-id="service-item"]', (items) =>
           items.map((item) => {
@@ -82,7 +82,7 @@ export class ProfileScraper {
       }
 
       // Availability
-      let availability: Array<{ startAt: string; endAt: string; modality: string }> = [];
+      let availability: Availability[] = [];
       try {
         availability = await this.scrapeAvailability(page);
       } catch {
@@ -120,10 +120,8 @@ export class ProfileScraper {
     }
   }
 
-  private async scrapeAvailability(
-    page: Page,
-  ): Promise<Array<{ startAt: string; endAt: string; modality: string }>> {
-    const availability: Array<{ startAt: string; endAt: string; modality: string }> = [];
+  private async scrapeAvailability(page: Page): Promise<Availability[]> {
+    const availability: Availability[] = [];
 
     // Check if calendar is available
     const noCalendar = await page
@@ -139,7 +137,7 @@ export class ProfileScraper {
     for (const tab of tabs) {
       const tabText = await tab.evaluate((el: Element) => el.textContent?.trim());
       const isOnline = tabText?.toLowerCase().includes('online');
-      const modality = isOnline ? 'online' : 'in_person';
+      const modality: 'in_person' | 'online' = isOnline ? 'online' : 'in_person';
 
       // Click tab using evaluate
       await tab.evaluate((el: HTMLElement) => el.click());
@@ -233,9 +231,7 @@ export class ProfileScraper {
     return availability;
   }
 
-  private generateFakeTreatments(
-    specialty: string,
-  ): Array<{ name: string; price: number; currency: string }> {
+  private generateFakeTreatments(specialty: string): Treatment[] {
     const treatments = [];
     const count = Math.floor(Math.random() * 3) + 2; // 2 to 4 treatments
     for (let i = 0; i < count; i++) {
@@ -248,11 +244,7 @@ export class ProfileScraper {
     return treatments;
   }
 
-  private generateFakeAvailability(): Array<{
-    startAt: string;
-    endAt: string;
-    modality: string;
-  }> {
+  private generateFakeAvailability(): Availability[] {
     const availability = [];
     const today = new Date();
     for (let i = 1; i <= 3; i++) {
@@ -264,7 +256,7 @@ export class ProfileScraper {
       availability.push({
         startAt: date.toISOString(),
         endAt: new Date(date.getTime() + 30 * 60000).toISOString(),
-        modality: 'in_person',
+        modality: 'in_person' as const,
       });
 
       // Afternoon slot
@@ -272,7 +264,7 @@ export class ProfileScraper {
       availability.push({
         startAt: date.toISOString(),
         endAt: new Date(date.getTime() + 30 * 60000).toISOString(),
-        modality: 'in_person',
+        modality: 'in_person' as const,
       });
     }
     return availability;

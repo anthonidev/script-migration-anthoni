@@ -1,128 +1,128 @@
 [
   {
-    "fullName": "Dr. Juan Manuel Menéndez García",
+    "fullName": "Dra. Hameda Rahimi",
     "specialty": "Cardiólogo",
     "city": "Lima",
     "address": "Lima",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 296,
-    "sourceProfileUrl": "https://www.doctoralia.pe/juan-manuel-menendez-garcia/cardiologo/lima#address-id=30249&is-online-only=false&filters%5Bspecializations%5D%5B%5D=7",
+    "reviewCount": 33,
+    "sourceProfileUrl": "https://www.doctoralia.pe/hameda-rahimi/cardiologo/lince#address-id=35929&is-online-only=false&filters%5Bspecializations%5D%5B%5D=7",
     "treatments": [
       {
         "name": "Consulta de Revisión / Visitas sucesivas",
+        "currency": "PEN"
+      },
+      {
+        "name": "Visitas sucesivas Cardiología",
         "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Consulta online",
+        "name": "Consulta de Cardiología con electrocardiograma",
         "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Monitoreo Ambulatorio de la Presión Arterial (MAPA)",
-        "price": 300,
+        "name": "Consulta de Cardiología sin electrocardiograma",
+        "price": 100,
         "currency": "PEN"
       },
       {
-        "name": "Levantamiento de observación en cardiología",
-        "price": 150,
-        "currency": "PEN"
-      },
-      {
-        "name": "Implante de marcapaso",
+        "name": "Consulta presencial",
+        "price": 100,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
+        "startAt": "2025-11-27T14:00:00.000Z",
+        "endAt": "2025-11-27T14:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T20:00:00.000Z",
-        "endAt": "2025-11-27T20:30:00.000Z",
+        "startAt": "2025-11-27T21:00:00.000Z",
+        "endAt": "2025-11-27T21:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T12:00:00.000Z",
-        "endAt": "2025-11-28T12:30:00.000Z",
+        "startAt": "2025-11-28T19:30:00.000Z",
+        "endAt": "2025-11-28T20:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T20:00:00.000Z",
-        "endAt": "2025-11-28T20:30:00.000Z",
+        "startAt": "2025-11-28T21:00:00.000Z",
+        "endAt": "2025-11-28T21:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-01T08:00:00.000Z",
-        "endAt": "2025-12-01T08:30:00.000Z",
+        "startAt": "2025-11-29T11:00:00.000Z",
+        "endAt": "2025-11-29T11:30:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dr. Juan Manuel Menéndez García",
+    "fullName": "Dra. Hameda Rahimi",
     "specialty": "Cardiólogo",
     "city": "Lima",
     "address": "Lima",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 296,
-    "sourceProfileUrl": "https://www.doctoralia.pe/juan-manuel-menendez-garcia/cardiologo/lima#address-id=30249&is-online-only=false&filters%5Bspecializations%5D%5B%5D=7",
+    "reviewCount": 33,
+    "sourceProfileUrl": "https://www.doctoralia.pe/hameda-rahimi/cardiologo/lince#address-id=35929&is-online-only=false&filters%5Bspecializations%5D%5B%5D=7",
     "treatments": [
       {
         "name": "Consulta de Revisión / Visitas sucesivas",
+        "currency": "PEN"
+      },
+      {
+        "name": "Visitas sucesivas Cardiología",
         "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Consulta online",
+        "name": "Consulta de Cardiología con electrocardiograma",
         "price": 150,
         "currency": "PEN"
       },
       {
-        "name": "Monitoreo Ambulatorio de la Presión Arterial (MAPA)",
-        "price": 300,
+        "name": "Consulta de Cardiología sin electrocardiograma",
+        "price": 100,
         "currency": "PEN"
       },
       {
-        "name": "Levantamiento de observación en cardiología",
-        "price": 150,
-        "currency": "PEN"
-      },
-      {
-        "name": "Implante de marcapaso",
+        "name": "Consulta presencial",
+        "price": 100,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T09:00:00.000Z",
-        "endAt": "2025-11-27T09:30:00.000Z",
+        "startAt": "2025-11-27T14:00:00.000Z",
+        "endAt": "2025-11-27T14:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T20:00:00.000Z",
-        "endAt": "2025-11-27T20:30:00.000Z",
+        "startAt": "2025-11-27T21:00:00.000Z",
+        "endAt": "2025-11-27T21:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T12:00:00.000Z",
-        "endAt": "2025-11-28T12:30:00.000Z",
+        "startAt": "2025-11-28T19:30:00.000Z",
+        "endAt": "2025-11-28T20:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T20:00:00.000Z",
-        "endAt": "2025-11-28T20:30:00.000Z",
+        "startAt": "2025-11-28T21:00:00.000Z",
+        "endAt": "2025-11-28T21:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-01T08:00:00.000Z",
-        "endAt": "2025-12-01T08:30:00.000Z",
+        "startAt": "2025-11-29T11:00:00.000Z",
+        "endAt": "2025-11-29T11:30:00.000Z",
         "modality": "in_person"
       }
     ]
@@ -362,131 +362,131 @@
     ]
   },
   {
-    "fullName": "Dr. Julián Lugo Peña",
+    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
     "specialty": "Cardiólogo",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 180,
-    "sourceProfileUrl": "https://www.doctoralia.co/julian-lugo-pena/cardiologo-internista/bogota#address-id=79097&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
+    "reviewCount": 422,
+    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#address-id=72116&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
     "treatments": [
       {
-        "name": "Visita Cardiología",
+        "name": "Ecocardiograma",
         "price": 200,
         "currency": "PEN"
       },
       {
-        "name": "Anticoagulación",
+        "name": "Electrocardiografía",
+        "price": 70,
+        "currency": "PEN"
+      },
+      {
+        "name": "Holter de presión arterial",
         "price": 250,
         "currency": "PEN"
       },
       {
-        "name": "Consulta clínica de Chagas",
-        "price": 250,
+        "name": "Monitoreo ambulatorio de presión arterial (MAPA)",
+        "price": 170,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento colesterol alto",
-        "price": 250,
-        "currency": "PEN"
-      },
-      {
-        "name": "Consulta en línea",
-        "price": 160,
+        "name": "Prueba cardiaca de esfuerzo",
+        "price": 170,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-28T08:30:00.000Z",
-        "endAt": "2025-11-28T09:00:00.000Z",
+        "startAt": "2025-12-23T08:00:00.000Z",
+        "endAt": "2025-12-23T08:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-12-23T11:00:00.000Z",
+        "endAt": "2025-12-23T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-04T12:30:00.000Z",
-        "endAt": "2025-12-04T13:00:00.000Z",
+        "startAt": "2025-12-29T09:00:00.000Z",
+        "endAt": "2025-12-29T09:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-04T18:00:00.000Z",
-        "endAt": "2025-12-04T18:30:00.000Z",
+        "startAt": "2025-12-29T11:00:00.000Z",
+        "endAt": "2025-12-29T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T08:30:00.000Z",
-        "endAt": "2025-11-28T09:00:00.000Z",
+        "startAt": "2025-12-30T09:00:00.000Z",
+        "endAt": "2025-12-30T09:30:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dr. Julián Lugo Peña",
+    "fullName": "Dra. Lucy Adela Tibaduiza Buitrago",
     "specialty": "Cardiólogo",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 180,
-    "sourceProfileUrl": "https://www.doctoralia.co/julian-lugo-pena/cardiologo-internista/bogota#address-id=79097&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
+    "reviewCount": 422,
+    "sourceProfileUrl": "https://www.doctoralia.co/lucy-adela-tibaduiza-buitrago/cardiologo-internista-epidemiologo/bogota#address-id=72116&is-online-only=false&filters%5Bspecializations%5D%5B%5D=4",
     "treatments": [
       {
-        "name": "Visita Cardiología",
+        "name": "Ecocardiograma",
         "price": 200,
         "currency": "PEN"
       },
       {
-        "name": "Anticoagulación",
+        "name": "Electrocardiografía",
+        "price": 70,
+        "currency": "PEN"
+      },
+      {
+        "name": "Holter de presión arterial",
         "price": 250,
         "currency": "PEN"
       },
       {
-        "name": "Consulta clínica de Chagas",
-        "price": 250,
+        "name": "Monitoreo ambulatorio de presión arterial (MAPA)",
+        "price": 170,
         "currency": "PEN"
       },
       {
-        "name": "Tratamiento colesterol alto",
-        "price": 250,
-        "currency": "PEN"
-      },
-      {
-        "name": "Consulta en línea",
-        "price": 160,
+        "name": "Prueba cardiaca de esfuerzo",
+        "price": 170,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-28T08:30:00.000Z",
-        "endAt": "2025-11-28T09:00:00.000Z",
+        "startAt": "2025-12-23T08:00:00.000Z",
+        "endAt": "2025-12-23T08:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T09:00:00.000Z",
-        "endAt": "2025-11-28T09:30:00.000Z",
+        "startAt": "2025-12-23T11:00:00.000Z",
+        "endAt": "2025-12-23T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-04T12:30:00.000Z",
-        "endAt": "2025-12-04T13:00:00.000Z",
+        "startAt": "2025-12-29T09:00:00.000Z",
+        "endAt": "2025-12-29T09:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-04T18:00:00.000Z",
-        "endAt": "2025-12-04T18:30:00.000Z",
+        "startAt": "2025-12-29T11:00:00.000Z",
+        "endAt": "2025-12-29T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T08:30:00.000Z",
-        "endAt": "2025-11-28T09:00:00.000Z",
+        "startAt": "2025-12-30T09:00:00.000Z",
+        "endAt": "2025-12-30T09:30:00.000Z",
         "modality": "in_person"
       }
     ]
@@ -622,131 +622,123 @@
     ]
   },
   {
-    "fullName": "Dra. Clara Marcela Peña",
+    "fullName": "Dr. Jorge Andres Alvarez Mantilla",
     "specialty": "Pediatra",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 31,
-    "sourceProfileUrl": "https://www.doctoralia.co/clara-marcela-pena/pediatra/bogota#address-id=110369&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
+    "reviewCount": 332,
+    "sourceProfileUrl": "https://www.doctoralia.co/jorge-andres-alvarez-mantilla/pediatra/bogota#address-id=72407&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
     "treatments": [
       {
-        "name": "Visita Pediatría",
-        "price": 250,
+        "name": "Consulta del adolescente",
         "currency": "PEN"
       },
       {
-        "name": "Asesoría en puericultura",
-        "price": 250,
+        "name": "Consulta de Pediatría primera vez",
+        "price": 190,
         "currency": "PEN"
       },
       {
-        "name": "Asesoría Online Pediatría",
-        "price": 250,
+        "name": "Vacunación del niño y adolescente",
         "currency": "PEN"
       },
       {
-        "name": "Asesoría pediátrica por Videollamada",
-        "price": 250,
+        "name": "Desarrollo motor infantil",
         "currency": "PEN"
       },
       {
-        "name": "Consulta en línea",
-        "price": 250,
+        "name": "Crecimiento y desarrollo pediátrico",
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T08:00:00.000Z",
-        "endAt": "2025-11-27T08:30:00.000Z",
+        "startAt": "2025-12-09T09:00:00.000Z",
+        "endAt": "2025-12-09T09:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T20:45:00.000Z",
-        "endAt": "2025-11-27T21:15:00.000Z",
+        "startAt": "2025-12-09T11:00:00.000Z",
+        "endAt": "2025-12-09T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T08:00:00.000Z",
-        "endAt": "2025-11-28T08:30:00.000Z",
+        "startAt": "2025-12-10T10:30:00.000Z",
+        "endAt": "2025-12-10T11:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T20:45:00.000Z",
-        "endAt": "2025-11-28T21:15:00.000Z",
+        "startAt": "2025-12-10T11:00:00.000Z",
+        "endAt": "2025-12-10T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T08:00:00.000Z",
-        "endAt": "2025-11-29T08:30:00.000Z",
+        "startAt": "2025-12-15T10:30:00.000Z",
+        "endAt": "2025-12-15T11:00:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dra. Clara Marcela Peña",
+    "fullName": "Dr. Jorge Andres Alvarez Mantilla",
     "specialty": "Pediatra",
     "city": "Bogotá",
     "address": "Bogotá",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 31,
-    "sourceProfileUrl": "https://www.doctoralia.co/clara-marcela-pena/pediatra/bogota#address-id=110369&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
+    "reviewCount": 332,
+    "sourceProfileUrl": "https://www.doctoralia.co/jorge-andres-alvarez-mantilla/pediatra/bogota#address-id=72407&is-online-only=false&filters%5Bspecializations%5D%5B%5D=51",
     "treatments": [
       {
-        "name": "Visita Pediatría",
-        "price": 250,
+        "name": "Consulta del adolescente",
         "currency": "PEN"
       },
       {
-        "name": "Asesoría en puericultura",
-        "price": 250,
+        "name": "Consulta de Pediatría primera vez",
+        "price": 190,
         "currency": "PEN"
       },
       {
-        "name": "Asesoría Online Pediatría",
-        "price": 250,
+        "name": "Vacunación del niño y adolescente",
         "currency": "PEN"
       },
       {
-        "name": "Asesoría pediátrica por Videollamada",
-        "price": 250,
+        "name": "Desarrollo motor infantil",
         "currency": "PEN"
       },
       {
-        "name": "Consulta en línea",
-        "price": 250,
+        "name": "Crecimiento y desarrollo pediátrico",
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T08:00:00.000Z",
-        "endAt": "2025-11-27T08:30:00.000Z",
+        "startAt": "2025-12-09T09:00:00.000Z",
+        "endAt": "2025-12-09T09:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T20:45:00.000Z",
-        "endAt": "2025-11-27T21:15:00.000Z",
+        "startAt": "2025-12-09T11:00:00.000Z",
+        "endAt": "2025-12-09T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T08:00:00.000Z",
-        "endAt": "2025-11-28T08:30:00.000Z",
+        "startAt": "2025-12-10T10:30:00.000Z",
+        "endAt": "2025-12-10T11:00:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T20:45:00.000Z",
-        "endAt": "2025-11-28T21:15:00.000Z",
+        "startAt": "2025-12-10T11:00:00.000Z",
+        "endAt": "2025-12-10T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-29T08:00:00.000Z",
-        "endAt": "2025-11-29T08:30:00.000Z",
+        "startAt": "2025-12-15T10:30:00.000Z",
+        "endAt": "2025-12-15T11:00:00.000Z",
         "modality": "in_person"
       }
     ]
@@ -882,121 +874,131 @@
     ]
   },
   {
-    "fullName": "Dr. Ricardo Moreno Alonso de Celada",
+    "fullName": "Dr. Emiliano Grillo",
     "specialty": "Dermatólogo",
     "city": "Madrid",
     "address": "Madrid",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 406,
-    "sourceProfileUrl": "https://www.doctoralia.es/ricardo-moreno-alonso-de-celada/dermatologo-dermatologo-infantil/madrid#address-id=265939&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
+    "reviewCount": 103,
+    "sourceProfileUrl": "https://www.doctoralia.es/emiliano-grillo/dermatologo/madrid#address-id=305229&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
     "treatments": [
       {
         "name": "Consulta online",
-        "price": 140,
+        "price": 167,
         "currency": "PEN"
       },
       {
         "name": "Visita Dermatología",
-        "price": 140,
+        "price": 120,
         "currency": "PEN"
       },
       {
-        "name": "Consulta dermatológica",
-        "price": 140,
+        "name": "Primera visita Dermatología",
+        "price": 166,
         "currency": "PEN"
       },
       {
-        "name": "Visita de revisión",
-        "price": 140,
+        "name": "Primera visita Dermatología Pediátrica",
+        "price": 120,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta Capilar",
+        "price": 166,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T17:20:00.000Z",
-        "endAt": "2025-11-27T17:50:00.000Z",
+        "startAt": "2025-11-27T11:00:00.000Z",
+        "endAt": "2025-11-27T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T19:40:00.000Z",
-        "endAt": "2025-11-27T20:10:00.000Z",
+        "startAt": "2025-11-27T13:45:00.000Z",
+        "endAt": "2025-11-27T14:15:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T11:00:00.000Z",
-        "endAt": "2025-11-28T11:30:00.000Z",
+        "startAt": "2025-12-04T11:00:00.000Z",
+        "endAt": "2025-12-04T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T14:00:00.000Z",
-        "endAt": "2025-11-28T14:30:00.000Z",
+        "startAt": "2025-12-04T13:45:00.000Z",
+        "endAt": "2025-12-04T14:15:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-01T10:40:00.000Z",
-        "endAt": "2025-12-01T11:10:00.000Z",
+        "startAt": "2025-11-27T11:00:00.000Z",
+        "endAt": "2025-11-27T11:30:00.000Z",
         "modality": "in_person"
       }
     ]
   },
   {
-    "fullName": "Dr. Ricardo Moreno Alonso de Celada",
+    "fullName": "Dr. Emiliano Grillo",
     "specialty": "Dermatólogo",
     "city": "Madrid",
     "address": "Madrid",
     "phoneCountryCode": "+51",
     "phoneNumber": "999888777",
     "rating": 5,
-    "reviewCount": 406,
-    "sourceProfileUrl": "https://www.doctoralia.es/ricardo-moreno-alonso-de-celada/dermatologo-dermatologo-infantil/madrid#address-id=265939&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
+    "reviewCount": 103,
+    "sourceProfileUrl": "https://www.doctoralia.es/emiliano-grillo/dermatologo/madrid#address-id=305229&is-online-only=false&filters%5Bspecializations%5D%5B%5D=17",
     "treatments": [
       {
         "name": "Consulta online",
-        "price": 140,
+        "price": 167,
         "currency": "PEN"
       },
       {
         "name": "Visita Dermatología",
-        "price": 140,
+        "price": 120,
         "currency": "PEN"
       },
       {
-        "name": "Consulta dermatológica",
-        "price": 140,
+        "name": "Primera visita Dermatología",
+        "price": 166,
         "currency": "PEN"
       },
       {
-        "name": "Visita de revisión",
-        "price": 140,
+        "name": "Primera visita Dermatología Pediátrica",
+        "price": 120,
+        "currency": "PEN"
+      },
+      {
+        "name": "Consulta Capilar",
+        "price": 166,
         "currency": "PEN"
       }
     ],
     "availability": [
       {
-        "startAt": "2025-11-27T17:20:00.000Z",
-        "endAt": "2025-11-27T17:50:00.000Z",
+        "startAt": "2025-11-27T11:00:00.000Z",
+        "endAt": "2025-11-27T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-27T19:40:00.000Z",
-        "endAt": "2025-11-27T20:10:00.000Z",
+        "startAt": "2025-11-27T13:45:00.000Z",
+        "endAt": "2025-11-27T14:15:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T11:00:00.000Z",
-        "endAt": "2025-11-28T11:30:00.000Z",
+        "startAt": "2025-12-04T11:00:00.000Z",
+        "endAt": "2025-12-04T11:30:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-11-28T14:00:00.000Z",
-        "endAt": "2025-11-28T14:30:00.000Z",
+        "startAt": "2025-12-04T13:45:00.000Z",
+        "endAt": "2025-12-04T14:15:00.000Z",
         "modality": "in_person"
       },
       {
-        "startAt": "2025-12-01T10:40:00.000Z",
-        "endAt": "2025-12-01T11:10:00.000Z",
+        "startAt": "2025-11-27T11:00:00.000Z",
+        "endAt": "2025-11-27T11:30:00.000Z",
         "modality": "in_person"
       }
     ]

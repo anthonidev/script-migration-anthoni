@@ -1,3 +1,15 @@
+export interface Treatment {
+  name: string;
+  price?: number;
+  currency?: string;
+}
+
+export interface Availability {
+  startAt: string;
+  endAt: string;
+  modality: 'in_person' | 'online';
+}
+
 export interface ScrapedDoctor {
   fullName: string;
   specialty: string;
@@ -8,8 +20,8 @@ export interface ScrapedDoctor {
   rating: number;
   reviewCount: number;
   sourceProfileUrl: string;
-  treatments: { name: string; price?: number; currency?: string }[];
-  availability: { startAt: string; endAt: string; modality: 'in_person' | 'online' }[];
+  treatments: Treatment[];
+  availability: Availability[];
 }
 
 export interface GeneratedPatient {
